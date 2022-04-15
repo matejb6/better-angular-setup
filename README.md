@@ -1,27 +1,47 @@
-# NgCustomSetup
+# Ng Custom Setup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.17.
+## About
+An Angular app with custom setup.
 
-## Development server
+## App creation
+Project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requirements
+* node.js v14.0 and higher
+* npm v6.0 and higher
 
-## Code scaffolding
+## Additional packages
+* Angular Material added with: `ng add @angular/material`
+* ESLint added with: `ng add @angular-eslint/schematics`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
+* In project root run `npm install` to install deps
+* Script `prepare` should run with `npm install` to install husky, if not, run `npm run prepare`
+
+## Pre commit hooks
+Pre commit hooks are used to check code with Prettier and ESLint.
+Before each commit, staged files will be checked with prettier and lint scripts and committing of unchecked code will be prevented.
+To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
+
+## Start
+* In project root run `npm start` to start dev server
+* Navigate to `http://localhost:4200/`
+* The app will automatically reload if you change any of the source files
 
 ## Build
+* In project root run `npm run build` to build the project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Test
+* In project root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
+* In project root run `npm test:coverage` to execute the unit tests with coverage
+* In project root run `npm test:ci` to execute the unit tests in headless mode
 
-## Running unit tests
+## Lint
+* In project root run `npm run lint` to lint the project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Prettier
+* In project root run `npm run prettier:check` to check if files are formatted
+* In project root run `npm run prettier:write` to format files
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Developer
+**Matej Buljan**
