@@ -1,7 +1,7 @@
 # Ng Custom Setup
 
 ## About
-An Angular app with custom setup.
+An Angular app with custom setup. Includes additional libraries, GitHub Actions CI setup, pre commit hooks, etc.
 
 ## App creation
 Project was generated with [Angular CLI](https://github.com/angular/angular-cli).
