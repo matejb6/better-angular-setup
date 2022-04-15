@@ -21,7 +21,10 @@ Project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 ## Pre commit hooks
 Pre commit hooks are used to check code with Prettier and ESLint.
 Before each commit, staged files will be checked with prettier and lint scripts and committing of unchecked code will be prevented.
-To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
+To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
+
+## CI setup
+CI is run by GitHub Actions. See `.github/workflows/main.yml` for further details.
 
 ## Start
 * In project root run `npm start` to start dev server
