@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Fixed
+
+## [0.1.0] - 2022-04-15
+### Added
 - Angular Material
 - ESLint
 - Prettier
@@ -13,9 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CI setup
 ### Changed
 - Files linted
+- Karma config
 ### Fixed
 
-## [0.0.0] - 2021-04-15
+## [0.0.0] - 2022-04-15
 ### Added
 - Repository created
 - Angular project created
