@@ -14,6 +14,9 @@ Project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 * Angular Material added with: `ng add @angular/material`
 * ESLint added with: `ng add @angular-eslint/schematics`
 
+## CI setup
+CI is run by GitHub Actions. See `.github/workflows/main.yml` for further details.
+
 ## Setup
 * In project root run `npm install` to install deps
 * Script `prepare` should run with `npm install` to install husky, if not, run `npm run prepare`
@@ -22,9 +25,6 @@ Project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 Pre commit hooks are used to check code with Prettier and ESLint.
 Before each commit, staged files will be checked with prettier and lint scripts and committing of unchecked code will be prevented.
 To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
-
-## CI setup
-CI is run by GitHub Actions. See `.github/workflows/main.yml` for further details.
 
 ## Start
 * In project root run `npm start` to start dev server
