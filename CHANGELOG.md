@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [0.2.0] - 2022-05-12
+### Added
+- First view
+- Core and shared modules
+### Changed
+- Angular update from 12 to 13
+
 ## [0.1.0] - 2022-04-15
 ### Added
 - Angular Material
@@ -19,7 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Files linted
 - Karma config
-### Fixed
 
 ## [0.0.0] - 2022-04-15
 ### Added
