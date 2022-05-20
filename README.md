@@ -1,5 +1,9 @@
 # Ng Custom Setup
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/matejb6/ng-custom-setup)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/matejb6/ng-custom-setup/CI)
+![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
+
 ## About
 An Angular app with custom setup. Includes additional libraries, GitHub Actions CI setup, pre commit hooks, etc.
 
