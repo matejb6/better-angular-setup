@@ -17,7 +17,10 @@
     "test": "ng test --browsers=Chrome",
     "test:ci": "ng test --browsers=ChromeHeadless --reporters=spec --no-watch",
     "test:coverage": "ng test --browsers=ChromeHeadless --reporters=spec --no-watch --code-coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "version:major": "npm version major",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch"
   },
   "private": true,
   "dependencies": {
