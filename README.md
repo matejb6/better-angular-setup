@@ -38,12 +38,12 @@ To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
 ## Build
 * In project root run `npm run build` to build the project
 
-## Lint
-* In project root run `npm run lint` to lint the project
-
 ## Prettier
 * In project root run `npm run prettier:check` to check if files are formatted
 * In project root run `npm run prettier:write` to format files
+
+## Lint
+* In project root run `npm run lint` to lint the project
 
 ## Test
 * In project root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
