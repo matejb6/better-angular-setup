@@ -50,9 +50,9 @@ To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
 * In project root run `npm test:ci` to execute the unit tests in headless mode
 * In project root run `npm test:coverage` to execute the unit tests in headless mode with coverage
 
-## Release
-* In project root run `npm version major|minor|patch` to bump version
-* Go to GitHub Releases to make a new release
+## New version and release
+* In project root run `npm run version:major` or `npm run version:minor` or `npm run version:patch` to create new version
+* Go to GitHub Releases to make a new release with changelog notes
 
 ## Developer
 **Matej Buljan**
