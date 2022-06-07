@@ -1,17 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Routes, RoutesService } from './routes.service';
+import { RoutesService } from './routes.service';
 
 describe('RoutesService', () => {
   let service: RoutesService;
-
-  // Test data
-  const routes: Routes = {
-    first: 'first'
-  };
-  const routePaths: Routes = {
-    first: '/' + routes.first
-  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -24,11 +16,15 @@ describe('RoutesService', () => {
     expect(service).toBeDefined();
   });
 
-  it('should have getRoutes method', () => {
-    expect(service.getRoutes()).toEqual(routes);
+  it('should have routes', () => {
+    expect(service.getRoutes()).toEqual({
+      first: 'first'
+    });
   });
 
-  it('should have getRoutePaths method', () => {
-    expect(service.getRoutePaths()).toEqual(routePaths);
+  it('should have routePaths', () => {
+    expect(service.getRoutePaths()).toEqual({
+      first: '/first'
+    });
   });
 });
