@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Fixed
+
+## [0.4.0] - 2022-06-14
+### Added
 - Welcome view content
 ### Changed
 - Angular update from 13 to 14
-- First view renamed with Welcome view
+- First view renamed to Welcome view
 ### Fixed
 
 ## [0.3.0] - 2022-05-27
