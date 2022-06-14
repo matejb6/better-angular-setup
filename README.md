@@ -22,10 +22,10 @@ Project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 CI is run by GitHub Actions. See `.github/workflows/main.yml` for further details.
 
 ## Setup
-* In project root run `npm install` to install deps
+* In project root run `npm install` to install dependencies
 * Script `prepare` should run with `npm install` to install husky, if not, run `npm run prepare`
 
-## Pre commit hooks
+## Commit hooks
 Pre commit hooks are used to check code with Prettier and ESLint.
 Before each commit, staged files will be checked with prettier and lint scripts and committing of unchecked code will be prevented.
 To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
@@ -53,6 +53,21 @@ To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
 ## New version and release
 * In project root run `npm run version:major` or `npm run version:minor` or `npm run version:patch` to create new version
 * Go to GitHub Releases to make a new release with changelog notes
+
+## App structure
+App has following structure:
+* App root located in `src/app`
+* App core located in `src/app/core`
+* App core located in `src/app/shared`
+* App core located in `src/app/views`
+### Root
+This is the app root setup.
+### Core
+This module contains core setup, used for singleton services, data services, auth, etc.
+### Shared
+This module is used for storing shared functionality, such as various services, pipes, etc.
+### Views
+This folder contains all views.
 
 ## Developer
 **Matej Buljan**
