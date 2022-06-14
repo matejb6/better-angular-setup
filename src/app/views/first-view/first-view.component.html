@@ -1,1 +1,11 @@
-<h1 style="text-align: center">{{ title }}</h1>
+<h1>{{ title }}</h1>
+
+<mat-card class="card">
+  <mat-card-content>
+    <p>{{ paragraph }}</p>
+    <ul>
+      <li *ngFor="let library of additionalLibraries">{{ library }}</li>
+    </ul>
+    <p>{{ message }}</p>
+  </mat-card-content>
+</mat-card>
