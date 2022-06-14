@@ -28,4 +28,21 @@ describe('WelcomeViewComponent', () => {
   it('should have title', () => {
     expect(component.title).toContain('Hey developer');
   });
+
+  it('should render title', () => {
+    expect(nativeElem.querySelector('h1')).toBeTruthy();
+  });
+
+  it('should render card', () => {
+    expect(getCard(nativeElem)).toBeTruthy();
+  });
+
+  it('should render correct number of libraries', () => {
+    expect(getCardContent(nativeElem)?.querySelectorAll('li').length).toEqual(6);
+  });
 });
+
+const getCard = (parentElem: HTMLElement): HTMLElement | null => parentElem.querySelector('mat-card.card');
+
+const getCardContent = (parentElem: HTMLElement): HTMLElement | null | undefined =>
+  getCard(parentElem)?.querySelector('mat-card-content');
