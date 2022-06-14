@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { FirstViewComponent } from './first-view.component';
+import { WelcomeViewComponent } from './welcome-view.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: FirstViewComponent
+    component: WelcomeViewComponent
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class FirstViewRoutingModule {}
+export class WelcomeViewRoutingModule {}

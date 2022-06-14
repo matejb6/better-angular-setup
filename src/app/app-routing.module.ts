@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RoutesService } from '@core/routes/routes.service';
 
 const routesService: RoutesService = new RoutesService();
-const pathToDefaultView = routesService.getRoutePaths().first;
+const pathToDefaultView = routesService.getRoutePaths().welcome;
 const routes: Routes = [
   {
     path: '', // no route
@@ -12,8 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: routesService.getRoutes().first,
-    loadChildren: () => import('./views/first-view/first-view.module').then((m) => m.FirstViewModule)
+    path: routesService.getRoutes().welcome,
+    loadChildren: () => import('./views/welcome-view/welcome-view.module').then((m) => m.WelcomeViewModule)
   }
 ];
 
