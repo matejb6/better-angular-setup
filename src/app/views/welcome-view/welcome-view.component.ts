@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-first-view',
-  templateUrl: './first-view.component.html',
-  styleUrls: ['./first-view.component.scss']
+  selector: 'app-welcome-view',
+  templateUrl: './welcome-view.component.html',
+  styleUrls: ['./welcome-view.component.scss']
 })
-export class FirstViewComponent {
+export class WelcomeViewComponent {
   public readonly title: string;
   public readonly paragraph: string;
   public readonly additionalLibraries: string[];

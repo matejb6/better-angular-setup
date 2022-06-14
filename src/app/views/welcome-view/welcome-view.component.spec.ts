@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstViewModule } from './first-view.module';
-import { FirstViewComponent } from './first-view.component';
+import { WelcomeViewModule } from './welcome-view.module';
+import { WelcomeViewComponent } from './welcome-view.component';
 
-describe('FirstViewComponent', () => {
-  let fixture: ComponentFixture<FirstViewComponent>;
-  let component: FirstViewComponent;
+describe('WelcomeViewComponent', () => {
+  let fixture: ComponentFixture<WelcomeViewComponent>;
+  let component: WelcomeViewComponent;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FirstViewModule]
+      imports: [WelcomeViewModule]
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FirstViewComponent);
+    fixture = TestBed.createComponent(WelcomeViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;
@@ -26,6 +26,6 @@ describe('FirstViewComponent', () => {
   });
 
   it('should have title', () => {
-    expect(component.title).toEqual('First view');
+    expect(component.title).toContain('Hey developer');
   });
 });

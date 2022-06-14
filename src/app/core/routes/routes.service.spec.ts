@@ -18,13 +18,13 @@ describe('RoutesService', () => {
 
   it('should have routes', () => {
     expect(service.getRoutes()).toEqual({
-      first: 'first'
+      welcome: 'welcome'
     });
   });
 
   it('should have routePaths', () => {
     expect(service.getRoutePaths()).toEqual({
-      first: '/first'
+      welcome: '/welcome'
     });
   });
 });

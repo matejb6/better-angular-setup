@@ -15,10 +15,10 @@ export class RoutesService {
 
   constructor() {
     this.routes = {
-      first: 'first'
+      welcome: 'welcome'
     };
     this.routePaths = {
-      first: '/' + this.routes.first
+      welcome: '/' + this.routes.welcome
     };
   }
 
@@ -43,5 +43,5 @@ export class RoutesService {
  * Routes interface
  */
 export interface Routes {
-  first: string;
+  welcome: string;
 }
