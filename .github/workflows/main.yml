@@ -11,9 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: 'Build'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup
         run: npm ci
@@ -22,10 +23,11 @@ jobs:
 
   prettier:
     runs-on: ubuntu-latest
+    name: 'Prettier'
     needs: [ build ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup
         run: npm ci
@@ -34,10 +36,11 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
+    name: 'Lint'
     needs: [ build ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup
         run: npm ci
@@ -46,10 +49,11 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    name: 'Test'
     needs: [ build ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup
         run: npm ci
