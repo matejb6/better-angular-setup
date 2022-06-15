@@ -2,14 +2,7 @@
 <p>{{ paragraph }}</p>
 
 <div class="libraries">
-  <mat-card class="card" *ngFor="let library of libraries">
-    <mat-card-title>{{ library.name }}</mat-card-title>
-    <img [src]="library.logoPath" alt="No image" />
-    <mat-card-content>
-      <p>{{ library.description }}</p>
-      <a mat-raised-button [href]="library.link" target="_blank">More Info</a>
-    </mat-card-content>
-  </mat-card>
+  <app-library-card *ngFor="let library of libraries" [libraryCard]="library"></app-library-card>
 </div>
 
 <p>{{ message }}</p>

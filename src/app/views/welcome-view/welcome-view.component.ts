@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { LibraryCard } from '@shared/components/library-card/library-card.component';
+
 @Component({
   selector: 'app-welcome-view',
   templateUrl: './welcome-view.component.html',
@@ -8,7 +10,7 @@ import { Component } from '@angular/core';
 export class WelcomeViewComponent {
   public readonly title: string;
   public readonly paragraph: string;
-  public readonly libraries: Library[];
+  public readonly libraries: LibraryCard[];
   public readonly message: string;
 
   constructor() {
@@ -60,11 +62,4 @@ export class WelcomeViewComponent {
     ];
     this.message = 'This is just the beginning, it is your turn now :)...';
   }
-}
-
-interface Library {
-  logoPath: string;
-  name: string;
-  description: string;
-  link: string;
 }
