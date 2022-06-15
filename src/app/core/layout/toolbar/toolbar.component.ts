@@ -8,7 +8,10 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
+  public toolbarTitle: string;
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    this.toolbarTitle = 'Ng Custom Setup';
+
     iconRegistry.addSvgIcon(
       'angular-logo',
       sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/logos/angular_solidBlack.svg')
