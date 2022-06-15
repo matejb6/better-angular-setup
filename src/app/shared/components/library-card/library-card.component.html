@@ -1,0 +1,8 @@
+<mat-card class="card">
+  <mat-card-title>{{ libraryCard.name }}</mat-card-title>
+  <img [src]="libraryCard.logoPath || defaultImage" alt="No image" />
+  <mat-card-content>
+    <p>{{ libraryCard.description }}</p>
+    <a mat-raised-button [href]="libraryCard.link" target="_blank">More Info</a>
+  </mat-card-content>
+</mat-card>
