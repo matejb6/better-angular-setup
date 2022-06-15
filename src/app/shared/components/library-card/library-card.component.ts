@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class LibraryCardComponent {
   @Input() public libraryCard: LibraryCard;
+  public defaultImage: string;
 
   constructor() {
     this.libraryCard = {
@@ -15,6 +16,7 @@ export class LibraryCardComponent {
       description: '',
       link: ''
     };
+    this.defaultImage = '../../../../assets/logos/image_FILL0_wght400_GRAD0_opsz48.svg';
   }
 }
 
