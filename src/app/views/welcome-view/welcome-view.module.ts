@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 import { WelcomeViewRoutingModule } from './welcome-view-routing.module';
@@ -7,7 +8,7 @@ import { WelcomeViewComponent } from './welcome-view.component';
 import { WelcomeViewService } from './welcome-view.service';
 
 @NgModule({
-  imports: [MatCardModule, WelcomeViewRoutingModule, SharedModule],
+  imports: [MatButtonModule, MatCardModule, WelcomeViewRoutingModule, SharedModule],
   exports: [],
   declarations: [WelcomeViewComponent],
   providers: [WelcomeViewService]

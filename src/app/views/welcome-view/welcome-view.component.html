@@ -1,11 +1,15 @@
 <h1>{{ title }}</h1>
+<p>{{ paragraph }}</p>
 
-<mat-card class="card">
-  <mat-card-content>
-    <p>{{ paragraph }}</p>
-    <ul>
-      <li *ngFor="let library of additionalLibraries">{{ library }}</li>
-    </ul>
-    <p>{{ message }}</p>
-  </mat-card-content>
-</mat-card>
+<div class="libraries">
+  <mat-card class="card" *ngFor="let library of libraries">
+    <mat-card-title>{{ library.name }}</mat-card-title>
+    <img [src]="library.logoPath" alt="No image" />
+    <mat-card-content>
+      <p>{{ library.description }}</p>
+      <a mat-raised-button [href]="library.link" target="_blank">More Info</a>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<p>{{ message }}</p>
