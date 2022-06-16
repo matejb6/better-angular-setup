@@ -9,12 +9,21 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ToolbarComponent {
   public toolbarTitle: string;
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+
+  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     this.toolbarTitle = 'Ng Custom Setup';
 
-    iconRegistry.addSvgIcon(
+    this.addAngularSvgIconToRegistry();
+  }
+
+  /**
+   * @private
+   * @description Adds Angular SVG icon to registry
+   */
+  private addAngularSvgIconToRegistry(): void {
+    this.iconRegistry.addSvgIcon(
       'angular-logo',
-      sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/logos/angular.svg')
+      this.sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/logos/angular.svg')
     );
   }
 }
