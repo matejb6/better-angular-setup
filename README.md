@@ -66,8 +66,9 @@ To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
 * Go to GitHub repo
 * Click on `Actions`
 * Click on `Version` workflow
-* Click `Run workflow` and enter next version (eg. major, minor, patch)
-* New version is created from latest `main` branch, commit and tag are pushed to repo
+* Click `Run workflow`
+* Select branch and enter next version (eg. major, minor, patch)
+* New version is created, commit and tag are pushed to repo
 
 ## New release
 * Go to GitHub repo
