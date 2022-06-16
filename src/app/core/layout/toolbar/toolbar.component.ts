@@ -14,7 +14,7 @@ export class ToolbarComponent {
 
     iconRegistry.addSvgIcon(
       'angular-logo',
-      sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/logos/angular_solidBlack.svg')
+      sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/logos/angular.svg')
     );
   }
 }

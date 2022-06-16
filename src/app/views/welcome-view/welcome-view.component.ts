@@ -36,7 +36,7 @@ export class WelcomeViewComponent {
         link: 'https://eslint.org'
       },
       {
-        logoPath: '../../../assets/logos/GitHub-Mark-120px-plus.png',
+        logoPath: '../../../assets/logos/github.png',
         name: 'GitHub Actions',
         description: 'Automate your workflow from idea to production',
         link: 'https://github.com/features/actions'
