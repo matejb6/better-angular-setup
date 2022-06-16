@@ -42,7 +42,7 @@ export class WelcomeViewComponent {
         link: 'https://github.com/features/actions'
       },
       {
-        logoPath: '../../../assets/logos/prettier-banner-dark.png',
+        logoPath: '../../../assets/logos/prettier.png',
         name: 'Prettier',
         description: 'An opinionated code formatter',
         link: 'https://prettier.io'
