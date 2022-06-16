@@ -33,16 +33,10 @@ describe('WelcomeViewComponent', () => {
     expect(nativeElem.querySelector('h1')).toBeTruthy();
   });
 
-  it('should render card', () => {
-    expect(getCard(nativeElem)).toBeTruthy();
-  });
-
-  it('should render correct number of libraries', () => {
-    expect(getCardContent(nativeElem)?.querySelectorAll('li').length).toEqual(6);
+  it('should render multiple library cards', () => {
+    expect(getLibraryCards(nativeElem).length).toBeGreaterThan(0);
   });
 });
 
-const getCard = (parentElem: HTMLElement): HTMLElement | null => parentElem.querySelector('mat-card.card');
-
-const getCardContent = (parentElem: HTMLElement): HTMLElement | null | undefined =>
-  getCard(parentElem)?.querySelector('mat-card-content');
+const getLibraryCards = (parentElem: HTMLElement): NodeListOf<HTMLElement> =>
+  parentElem.querySelectorAll('app-library-card');

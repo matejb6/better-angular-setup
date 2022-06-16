@@ -1,0 +1,23 @@
+:host {
+  display: block;
+
+  mat-card.card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    background-color: lightblue;
+
+    img.logo {
+      width: 150px;
+      margin: 12px;
+      align-self: center;
+    }
+
+    mat-card-content {
+      position: absolute;
+      bottom: 16px;
+      width: inherit;
+    }
+  }
+}

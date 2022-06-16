@@ -1,11 +1,8 @@
 <h1>{{ title }}</h1>
+<h3>{{ paragraph }}</h3>
 
-<mat-card class="card">
-  <mat-card-content>
-    <p>{{ paragraph }}</p>
-    <ul>
-      <li *ngFor="let library of additionalLibraries">{{ library }}</li>
-    </ul>
-    <p>{{ message }}</p>
-  </mat-card-content>
-</mat-card>
+<div class="libraries">
+  <app-library-card *ngFor="let library of libraries" [libraryCard]="library"></app-library-card>
+</div>
+
+<p>{{ message }}</p>
