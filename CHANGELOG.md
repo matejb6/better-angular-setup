@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [0.5.0] - 2022-06-16
+### Added
+- Toolbar
+- Library card
+- GitHub Actions Version workflow
+- Shields.io badges
+### Changed
+- Welcome view card replaced with multiple library cards
+
 ## [0.4.0] - 2022-06-14
 ### Added
 - Welcome view content
