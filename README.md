@@ -33,7 +33,7 @@ Project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 ## GitHub Actions
 There are two workflows:
 * `CI` is used as general CI workflow
-* `Version` is used for creating new versions form `main` branch
+* `Version` is used for creating new versions
 
 For more details see `.github/workflows/`.
 
