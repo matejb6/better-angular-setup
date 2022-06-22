@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from '@shared/shared.module';
+import { ComponentsModule } from '../components.module';
 import { LibraryCard, LibraryCardComponent } from './library-card.component';
 
 describe('LibraryCardComponent', () => {
@@ -17,7 +17,7 @@ describe('LibraryCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SharedModule]
+      imports: [ComponentsModule]
     }).compileComponents();
   });
 
