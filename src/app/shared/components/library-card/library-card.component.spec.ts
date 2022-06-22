@@ -41,32 +41,16 @@ describe('LibraryCardComponent', () => {
     expect(getCardTitle(nativeElem)).toBeTruthy();
   });
 
+  it('should render card content', () => {
+    expect(getCardContent(nativeElem)).toBeTruthy();
+  });
+
   it('should render card image', () => {
     expect(getCardImage(nativeElem)).toBeTruthy();
   });
 
-  it('should render card content description', () => {
-    expect(getCardContentDescription(nativeElem)).toBeTruthy();
-  });
-
-  it('should render card content link button', () => {
-    expect(getCardContentLinkButton(nativeElem)).toBeTruthy();
-  });
-
   it('should have title', () => {
-    expect(getCardTitle(nativeElem)?.innerText).toEqual(libraryCard.name);
-  });
-
-  it('should have description', () => {
-    expect(getCardContentDescription(nativeElem)?.innerText).toEqual('Super awesome library you can use');
-  });
-
-  it('should have link button text', () => {
-    expect(getCardContentLinkButton(nativeElem)?.innerText).toEqual('More Info');
-  });
-
-  it('should have link button link', () => {
-    expect(getCardContentLinkButton(nativeElem)?.href).toEqual('https://www.example.com/link');
+    expect(getCardTitle(nativeElem)?.innerText).toEqual('Library');
   });
 });
 
@@ -75,14 +59,8 @@ const getCard = (parentElem: HTMLElement): HTMLElement | null => parentElem.quer
 const getCardTitle = (parentElem: HTMLElement): HTMLElement | null | undefined =>
   getCard(parentElem)?.querySelector('mat-card-title');
 
-const getCardImage = (parentElem: HTMLElement): HTMLImageElement | null | undefined =>
-  getCard(parentElem)?.querySelector('img.logo');
-
 const getCardContent = (parentElem: HTMLElement): HTMLElement | null | undefined =>
   getCard(parentElem)?.querySelector('mat-card-content');
 
-const getCardContentDescription = (parentElem: HTMLElement): HTMLParagraphElement | null | undefined =>
-  getCardContent(parentElem)?.querySelector('p');
-
-const getCardContentLinkButton = (parentElem: HTMLElement): HTMLAnchorElement | null | undefined =>
-  getCardContent(parentElem)?.querySelector('a');
+const getCardImage = (parentElem: HTMLElement): HTMLImageElement | null | undefined =>
+  getCardContent(parentElem)?.querySelector('img.logo');
