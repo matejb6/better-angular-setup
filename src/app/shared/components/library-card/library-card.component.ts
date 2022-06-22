@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class LibraryCardComponent {
   @Input() public libraryCard: LibraryCard;
-  public defaultImage: string;
+  public readonly defaultImage: string;
 
   constructor() {
     this.libraryCard = {
