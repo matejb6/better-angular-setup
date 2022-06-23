@@ -19,8 +19,8 @@ describe('WelcomeViewComponent', () => {
     nativeElem = fixture.nativeElement;
   });
 
-  it('should be defined', () => {
-    expect(component).toBeDefined();
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 
   it('should have title', () => {

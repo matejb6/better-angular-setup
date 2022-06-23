@@ -22,7 +22,7 @@ describe('LibraryDialogComponent', () => {
     nativeElem = fixture.nativeElement;
   });
 
-  it('should be defined', () => {
-    expect(component).toBeDefined();
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 });
