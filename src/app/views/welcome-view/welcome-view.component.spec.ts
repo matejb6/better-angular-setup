@@ -12,9 +12,7 @@ describe('WelcomeViewComponent', () => {
     await TestBed.configureTestingModule({
       imports: [WelcomeViewModule]
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(WelcomeViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

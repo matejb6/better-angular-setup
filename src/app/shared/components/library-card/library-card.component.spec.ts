@@ -19,9 +19,7 @@ describe('LibraryCardComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ComponentsModule]
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(LibraryCardComponent);
     component = fixture.componentInstance;
     component.libraryCard = libraryCard;
