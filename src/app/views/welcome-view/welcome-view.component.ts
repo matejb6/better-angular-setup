@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { libraries } from './libraries';
-import { LibraryCard } from '@shared/components/library-card/library-card.component';
+import { LibraryCard } from '@core/interfaces/library-card';
 import { DialogService } from '@shared/services/dialog.service';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
 

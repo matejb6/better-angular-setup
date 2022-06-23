@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppModule } from 'src/app/app.module';
 import { ServicesModule } from './services.module';
 import { DialogService } from './dialog.service';
-import { LibraryCard } from '@shared/components/library-card/library-card.component';
+import { LibraryCard } from '@core/interfaces/library-card';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
 
 describe('DialogService', () => {
@@ -13,7 +13,8 @@ describe('DialogService', () => {
     logoPath: '',
     name: 'Library',
     description: 'Super awesome library you can use',
-    link: 'https://www.example.com/link'
+    link: 'https://www.example.com/link',
+    stepsToAdd: []
   };
 
   beforeEach(() => {

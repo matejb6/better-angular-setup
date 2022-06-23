@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { LibraryCard } from '@core/interfaces/library-card';
+
 @Component({
   selector: 'app-library-card',
   templateUrl: './library-card.component.html',
@@ -15,7 +17,8 @@ export class LibraryCardComponent {
       logoPath: '',
       name: '',
       description: '',
-      link: ''
+      link: '',
+      stepsToAdd: []
     };
     this.cardClick = new EventEmitter<LibraryCard>();
     this.defaultImage = '../../../../assets/logos/image.svg';
@@ -28,11 +31,4 @@ export class LibraryCardComponent {
   public onCardClick(): void {
     this.cardClick.emit(this.libraryCard);
   }
-}
-
-export interface LibraryCard {
-  logoPath: string;
-  name: string;
-  description: string;
-  link: string;
 }

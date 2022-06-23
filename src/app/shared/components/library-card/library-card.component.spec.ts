@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ComponentsModule } from '../components.module';
-import { LibraryCard, LibraryCardComponent } from './library-card.component';
+import { LibraryCardComponent } from './library-card.component';
+import { LibraryCard } from '@core/interfaces/library-card';
 
 describe('LibraryCardComponent', () => {
   let fixture: ComponentFixture<LibraryCardComponent>;
@@ -12,7 +13,8 @@ describe('LibraryCardComponent', () => {
     logoPath: '',
     name: 'Library',
     description: 'Super awesome library you can use',
-    link: 'https://www.example.com/link'
+    link: 'https://www.example.com/link',
+    stepsToAdd: []
   };
 
   beforeEach(async () => {

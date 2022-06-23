@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { LibraryCard } from '../library-card/library-card.component';
+import { LibraryCard } from '@core/interfaces/library-card';
 
 @Component({
   selector: 'app-library-dialog',
