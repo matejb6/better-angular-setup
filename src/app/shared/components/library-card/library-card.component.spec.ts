@@ -46,11 +46,18 @@ describe('LibraryCardComponent', () => {
   });
 
   it('should render card image', () => {
-    expect(getCardImage(nativeElem)).toBeTruthy();
+    expect(getCardContentImage(nativeElem)).toBeTruthy();
   });
 
   it('should have title', () => {
-    expect(getCardTitle(nativeElem)?.innerText).toEqual('Library');
+    expect(getCardTitle(nativeElem)?.innerText).toEqual(libraryCard.name);
+  });
+
+  it('should emit an event on card click', () => {
+    spyOn(component.cardClick, 'emit');
+    getCard(nativeElem)?.click();
+
+    expect(component.cardClick.emit).toHaveBeenCalledOnceWith(libraryCard);
   });
 });
 
@@ -62,5 +69,5 @@ const getCardTitle = (parentElem: HTMLElement): HTMLElement | null | undefined =
 const getCardContent = (parentElem: HTMLElement): HTMLElement | null | undefined =>
   getCard(parentElem)?.querySelector('mat-card-content');
 
-const getCardImage = (parentElem: HTMLElement): HTMLImageElement | null | undefined =>
+const getCardContentImage = (parentElem: HTMLElement): HTMLImageElement | null | undefined =>
   getCardContent(parentElem)?.querySelector('img.logo');
