@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 
 @Injectable()
 export class DialogService {
-  constructor(public dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) {}
+
+  /**
+   * @private
+   * @param data Data
+   * @returns Dialog config
+   * @description Returns dialog config
+   */
+  private getDialogConfig(data: any): MatDialogConfig {
+    return {
+      data: data
+    };
+  }
 
   /**
    * @public
@@ -11,9 +23,7 @@ export class DialogService {
    * @param data Data to inject
    * @description Opens dialog with component and injects data
    */
-  public openDialog(component: any, data: any): void {
-    this.dialog.open(component, {
-      data: data
-    });
+  public openDialog(component: any, data: any): MatDialogRef<unknown, any> {
+    return this.dialog.open(component, this.getDialogConfig(data));
   }
 }
