@@ -1,7 +1,12 @@
 <h1 mat-dialog-title>{{ libraryCard.name }}</h1>
 <mat-dialog-content>
   <p>{{ libraryCard.description }}</p>
+  <p>Steps to add:</p>
+  <ul>
+    <li *ngFor="let item of libraryCard.stepsToAdd">{{ item }}</li>
+  </ul>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>OK</button>
+  <a mat-raised-button [href]="libraryCard.link" target="_blank">More info</a>
+  <button mat-raised-button color="primary" mat-dialog-close cdkFocusInitial>OK</button>
 </mat-dialog-actions>
