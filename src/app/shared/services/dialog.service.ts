@@ -22,6 +22,7 @@ export class DialogService {
    * @public
    * @param component Component to open
    * @param data Data to inject
+   * @returns Dialog reference
    * @description Opens dialog with component and injects data
    */
   public openDialog(component: any, data: any): MatDialogRef<unknown, any> {
