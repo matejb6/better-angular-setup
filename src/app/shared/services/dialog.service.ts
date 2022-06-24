@@ -14,7 +14,7 @@ export class DialogService {
   private getDialogConfig(data: any): MatDialogConfig {
     return {
       data: data,
-      width: '300px'
+      width: '400px'
     };
   }
 
