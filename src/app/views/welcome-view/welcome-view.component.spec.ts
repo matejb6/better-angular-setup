@@ -12,17 +12,15 @@ describe('WelcomeViewComponent', () => {
     await TestBed.configureTestingModule({
       imports: [WelcomeViewModule]
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(WelcomeViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;
   });
 
-  it('should be defined', () => {
-    expect(component).toBeDefined();
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 
   it('should have title', () => {

@@ -12,17 +12,15 @@ describe('ToolbarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [CoreModule]
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ToolbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;
   });
 
-  it('should be defined', () => {
-    expect(component).toBeDefined();
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 
   it('should render toolbar', () => {

@@ -1,23 +1,30 @@
+$card-height: 300px;
+
 :host {
   display: block;
 
   mat-card.card {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 300px;
+    height: $card-height;
     background-color: lightblue;
 
-    img.logo {
-      width: 150px;
-      margin: 12px;
-      align-self: center;
+    &:hover {
+      background-color: lightgreen;
     }
 
     mat-card-content {
-      position: absolute;
-      bottom: 16px;
-      width: inherit;
+      display: flex;
+      height: $card-height - 50px;
+      justify-content: center;
+      align-items: center;
+
+      img.logo {
+        width: 150px;
+        height: fit-content;
+      }
     }
   }
 }

@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { LibraryCard } from '@core/interfaces/library-card';
 
 @Component({
   selector: 'app-library-card',
@@ -7,22 +9,26 @@ import { Component, Input } from '@angular/core';
 })
 export class LibraryCardComponent {
   @Input() public libraryCard: LibraryCard;
-  public defaultImage: string;
+  @Output() public cardClick: EventEmitter<LibraryCard>;
+  public readonly defaultImage: string;
 
   constructor() {
     this.libraryCard = {
       logoPath: '',
       name: '',
       description: '',
-      link: ''
+      link: '',
+      stepsToAdd: []
     };
+    this.cardClick = new EventEmitter<LibraryCard>();
     this.defaultImage = '../../../../assets/logos/image.svg';
   }
-}
 
-export interface LibraryCard {
-  logoPath: string;
-  name: string;
-  description: string;
-  link: string;
+  /**
+   * @public
+   * @description On card click, emits and event of current library card data
+   */
+  public onCardClick(): void {
+    this.cardClick.emit(this.libraryCard);
+  }
 }
