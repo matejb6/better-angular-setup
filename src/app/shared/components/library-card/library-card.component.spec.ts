@@ -2,20 +2,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ComponentsModule } from '../components.module';
 import { LibraryCardComponent } from './library-card.component';
-import { LibraryCard } from '@core/interfaces/library-card';
+import { librariesMock } from '@core/data/libraries.mock';
 
 describe('LibraryCardComponent', () => {
   let fixture: ComponentFixture<LibraryCardComponent>;
   let component: LibraryCardComponent;
   let nativeElem: HTMLElement;
-
-  const libraryCard: LibraryCard = {
-    logoPath: '',
-    name: 'Library',
-    description: 'Super awesome library you can use',
-    link: 'https://www.example.com/link',
-    stepsToAdd: []
-  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -24,7 +16,7 @@ describe('LibraryCardComponent', () => {
 
     fixture = TestBed.createComponent(LibraryCardComponent);
     component = fixture.componentInstance;
-    component.libraryCard = libraryCard;
+    component.libraryCard = librariesMock[0];
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;
   });
@@ -50,14 +42,14 @@ describe('LibraryCardComponent', () => {
   });
 
   it('should have title', () => {
-    expect(getCardTitle(nativeElem)?.innerText).toEqual(libraryCard.name);
+    expect(getCardTitle(nativeElem)?.innerText).toEqual(librariesMock[0].name);
   });
 
   it('should emit an event on card click', () => {
     spyOn(component.cardClick, 'emit');
     getCard(nativeElem)?.click();
 
-    expect(component.cardClick.emit).toHaveBeenCalledOnceWith(libraryCard);
+    expect(component.cardClick.emit).toHaveBeenCalledOnceWith(librariesMock[0]);
   });
 });
 

@@ -3,19 +3,11 @@ import { TestBed } from '@angular/core/testing';
 import { AppModule } from 'src/app/app.module';
 import { ServicesModule } from './services.module';
 import { DialogService } from './dialog.service';
-import { LibraryCard } from '@core/interfaces/library-card';
+import { librariesMock } from '@core/data/libraries.mock';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
 
 describe('DialogService', () => {
   let service: DialogService;
-
-  const libraryCard: LibraryCard = {
-    logoPath: '',
-    name: 'Library',
-    description: 'Super awesome library you can use',
-    link: 'https://www.example.com/link',
-    stepsToAdd: []
-  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -29,7 +21,7 @@ describe('DialogService', () => {
   });
 
   it('should open dialog', () => {
-    const dialogRef = service.openDialog(LibraryDialogComponent, libraryCard);
+    const dialogRef = service.openDialog(LibraryDialogComponent, librariesMock[0]);
 
     expect(dialogRef.getState()).toEqual(0);
   });
