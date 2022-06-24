@@ -1,6 +1,6 @@
-import { LibraryCard } from '@core/interfaces/library-card';
+import { Library } from '@core/interfaces/library';
 
-export const libraries: LibraryCard[] = [
+export const libraries: Library[] = [
   {
     logoPath: '../../../assets/logos/router.svg',
     name: 'Angular Router',

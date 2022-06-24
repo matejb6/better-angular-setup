@@ -1,4 +1,4 @@
-export interface LibraryCard {
+export interface Library {
   logoPath: string;
   name: string;
   description: string;

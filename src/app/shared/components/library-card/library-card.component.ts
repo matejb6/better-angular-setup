@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { LibraryCard } from '@core/interfaces/library-card';
+import { Library } from '@core/interfaces/library';
 
 @Component({
   selector: 'app-library-card',
@@ -8,8 +8,8 @@ import { LibraryCard } from '@core/interfaces/library-card';
   styleUrls: ['./library-card.component.scss']
 })
 export class LibraryCardComponent {
-  @Input() public libraryCard: LibraryCard;
-  @Output() public cardClick: EventEmitter<LibraryCard>;
+  @Input() public libraryCard: Library;
+  @Output() public cardClick: EventEmitter<Library>;
   public readonly defaultImage: string;
 
   constructor() {
@@ -20,7 +20,7 @@ export class LibraryCardComponent {
       link: '',
       stepsToAdd: []
     };
-    this.cardClick = new EventEmitter<LibraryCard>();
+    this.cardClick = new EventEmitter<Library>();
     this.defaultImage = '../../../../assets/logos/image.svg';
   }
 

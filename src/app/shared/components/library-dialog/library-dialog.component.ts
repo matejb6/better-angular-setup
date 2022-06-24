@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { LibraryCard } from '@core/interfaces/library-card';
+import { Library } from '@core/interfaces/library';
 
 @Component({
   selector: 'app-library-dialog',
@@ -9,5 +9,5 @@ import { LibraryCard } from '@core/interfaces/library-card';
   styleUrls: ['./library-dialog.component.scss']
 })
 export class LibraryDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public libraryCard: LibraryCard) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public libraryCard: Library) {}
 }
