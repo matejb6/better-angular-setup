@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [0.6.0] - 2022-06-27
+### Added
+- Library dialog on library card click
+- Libraries mock
+### Changed
+- Library card content
+- Libraries data moved to separate folder
+- Unit tests
+
 ## [0.5.0] - 2022-06-16
 ### Added
 - Toolbar
