@@ -2,7 +2,11 @@
 <h3>{{ paragraph }}</h3>
 
 <div class="libraries">
-  <app-library-card *ngFor="let library of libraries" [libraryCard]="library"></app-library-card>
+  <app-library-card
+    *ngFor="let library of libraries"
+    [libraryCard]="library"
+    (cardClick)="onCardClick($event)"
+  ></app-library-card>
 </div>
 
 <p>{{ message }}</p>
