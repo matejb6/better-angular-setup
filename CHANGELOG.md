@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [0.6.1] - 2022-07-14
+### Changed
+- GitHub Actions workflows ("Check code" job)
+- Package keywords
+### Fixed
+- Readme app structure info
+
 ## [0.6.0] - 2022-06-27
 ### Added
 - Library dialog on library card click
