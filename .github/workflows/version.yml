@@ -20,7 +20,8 @@ jobs:
     needs: [ci]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Set git config user
         run:  |
           git config user.email "noreply@github.com"
