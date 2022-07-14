@@ -81,9 +81,9 @@ To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
 ## App structure
 App has following structure:
 * App root located in `src/app`
-* App core located in `src/app/core`
-* App core located in `src/app/shared`
-* App core located in `src/app/views`
+* App core module located in `src/app/core`
+* App shared module located in `src/app/shared`
+* App views located in `src/app/views`
 ### Root
 This is the app root setup.
 ### Core
