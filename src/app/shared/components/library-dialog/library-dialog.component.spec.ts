@@ -5,6 +5,7 @@ import { SharedModule } from '@shared/shared.module';
 import { ComponentsModule } from '../components.module';
 import { LibraryDialogComponent } from './library-dialog.component';
 import { librariesMock } from '@core/data/libraries.mock';
+import { LibraryDialogComponentQuery } from './library-dialog.component.query.spec';
 
 describe('LibraryDialogComponent', () => {
   let fixture: ComponentFixture<LibraryDialogComponent>;
@@ -27,89 +28,72 @@ describe('LibraryDialogComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should render dialog title', () => {
-    expect(getDialogTitle(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogTitle(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog content', () => {
-    expect(getDialogContent(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogContent(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog content description', () => {
-    expect(getDialogContentDescription(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogContentDescription(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog content description list', () => {
-    expect(getDialogContentDescriptionList(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogContentDescriptionList(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog content description list items', () => {
-    expect(getDialogContentDescriptionListItems(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogContentDescriptionListItems(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog actions', () => {
-    expect(getDialogActions(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogActions(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog actions link button', () => {
-    expect(getDialogActionsLinkButton(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogActionsLinkButton(nativeElem)).toBeTruthy();
   });
 
   it('should render dialog actions OK button', () => {
-    expect(getDialogActionsOkButton(nativeElem)).toBeTruthy();
+    expect(LibraryDialogComponentQuery.getDialogActionsOkButton(nativeElem)).toBeTruthy();
   });
 
   it('should have title', () => {
-    expect(getDialogTitle(nativeElem)?.innerText).toEqual(librariesMock[0].name);
+    expect(LibraryDialogComponentQuery.getDialogTitle(nativeElem)?.innerText).toEqual(librariesMock[0].name);
   });
 
   it('should have description', () => {
-    expect(getDialogContentDescription(nativeElem)?.innerText).toEqual(librariesMock[0].description);
+    expect(LibraryDialogComponentQuery.getDialogContentDescription(nativeElem)?.innerText).toEqual(
+      librariesMock[0].description
+    );
   });
 
   it('should have correct number of steps', () => {
-    expect(getDialogContentDescriptionListItems(nativeElem)?.length).toEqual(librariesMock[0].stepsToAdd.length);
+    expect(LibraryDialogComponentQuery.getDialogContentDescriptionListItems(nativeElem)?.length).toEqual(
+      librariesMock[0].stepsToAdd.length
+    );
   });
 
   it('should have first step', () => {
-    expect(getDialogContentDescriptionListItems(nativeElem)?.item(0).innerText).toEqual(librariesMock[0].stepsToAdd[0]);
+    expect(LibraryDialogComponentQuery.getDialogContentDescriptionListItems(nativeElem)?.item(0).innerText).toEqual(
+      librariesMock[0].stepsToAdd[0]
+    );
   });
 
   it('should align dialog actions to end', () => {
-    expect(getDialogActions(nativeElem)).toHaveClass('mat-dialog-actions-align-end');
+    expect(LibraryDialogComponentQuery.getDialogActions(nativeElem)).toHaveClass('mat-dialog-actions-align-end');
   });
 
   it('should not have dialog actions link button as primary', () => {
-    expect(getDialogActionsLinkButton(nativeElem)).not.toHaveClass('mat-primary');
+    expect(LibraryDialogComponentQuery.getDialogActionsLinkButton(nativeElem)).not.toHaveClass('mat-primary');
   });
 
   it('should have dialog actions link button link', () => {
-    expect(getDialogActionsLinkButton(nativeElem)?.href).toEqual(librariesMock[0].link);
+    expect(LibraryDialogComponentQuery.getDialogActionsLinkButton(nativeElem)?.href).toEqual(librariesMock[0].link);
   });
 
   it('should have dialog actions OK button as primary', () => {
-    expect(getDialogActionsOkButton(nativeElem)).toHaveClass('mat-primary');
+    expect(LibraryDialogComponentQuery.getDialogActionsOkButton(nativeElem)).toHaveClass('mat-primary');
   });
 });
-
-const getDialogTitle = (parentElem: HTMLElement): HTMLElement | null => parentElem.querySelector('h1.mat-dialog-title');
-
-const getDialogContent = (parentElem: HTMLElement): HTMLElement | null =>
-  parentElem.querySelector('mat-dialog-content.mat-dialog-content');
-
-const getDialogContentDescription = (parentElem: HTMLElement): HTMLParagraphElement | null | undefined =>
-  getDialogContent(parentElem)?.querySelectorAll('p').item(0);
-
-const getDialogContentDescriptionList = (parentElem: HTMLElement): HTMLUListElement | null | undefined =>
-  getDialogContent(parentElem)?.querySelector('ul');
-
-const getDialogContentDescriptionListItems = (parentElem: HTMLElement): NodeListOf<HTMLLIElement> | undefined =>
-  getDialogContentDescriptionList(parentElem)?.querySelectorAll('li');
-
-const getDialogActions = (parentElem: HTMLElement): HTMLElement | null =>
-  parentElem.querySelector('mat-dialog-actions.mat-dialog-actions');
-
-const getDialogActionsLinkButton = (parentElem: HTMLElement): HTMLAnchorElement | null | undefined =>
-  getDialogActions(parentElem)?.querySelector('a.mat-raised-button');
-
-const getDialogActionsOkButton = (parentElem: HTMLElement): HTMLButtonElement | null | undefined =>
-  getDialogActions(parentElem)?.querySelector('button.mat-raised-button');
