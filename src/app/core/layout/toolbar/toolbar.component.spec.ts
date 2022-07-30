@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutModule } from '../layout.module';
 import { ToolbarComponent } from './toolbar.component';
+import { ToolbarComponentQuery } from './toolbar.component.query.spec';
 
 describe('ToolbarComponent', () => {
   let fixture: ComponentFixture<ToolbarComponent>;
@@ -24,26 +25,18 @@ describe('ToolbarComponent', () => {
   });
 
   it('should render toolbar', () => {
-    expect(getToolbar(nativeElem)).toBeTruthy();
+    expect(ToolbarComponentQuery.getToolbar(nativeElem)).toBeTruthy();
   });
 
   it('should render toolbar icon', () => {
-    expect(getToolbarIcon(nativeElem)).toBeTruthy();
+    expect(ToolbarComponentQuery.getToolbarIcon(nativeElem)).toBeTruthy();
   });
 
   it('should render toolbar title', () => {
-    expect(getToolbarTitle(nativeElem)).toBeTruthy();
+    expect(ToolbarComponentQuery.getToolbarTitle(nativeElem)).toBeTruthy();
   });
 
   it('should have toolbar title', () => {
-    expect(getToolbarTitle(nativeElem)?.innerText).toContain('Ng Custom Setup');
+    expect(ToolbarComponentQuery.getToolbarTitle(nativeElem)?.innerText).toContain('Ng Custom Setup');
   });
 });
-
-const getToolbar = (parentElem: HTMLElement): HTMLElement | null => parentElem.querySelector('mat-toolbar');
-
-const getToolbarIcon = (parentElem: HTMLElement): HTMLElement | null | undefined =>
-  getToolbar(parentElem)?.querySelector('mat-icon.mat-icon');
-
-const getToolbarTitle = (parentElem: HTMLElement): HTMLElement | null | undefined =>
-  getToolbar(parentElem)?.querySelector('span');

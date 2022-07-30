@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.0.0] - 2022-07-30
+### Added
+- Components tests query classes
+### Changed
+- Package dependencies
+
 ## [0.6.1] - 2022-07-14
 ### Changed
 - GitHub Actions workflows ("Check code" job)
