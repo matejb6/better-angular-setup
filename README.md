@@ -26,6 +26,19 @@ Project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 * `Prettier` added with: `npm install prettier --save-dev`
 * `Husky` added with: `npm install husky --save-dev`
 
+## About package
+### Scripts
+* `start`: Starts Angular development server and serves the app
+* `build`: Builds Angular app
+* `watch`: Builds Angular app when files change with development configuration
+* `prettier:check`: Checks code formatting with Prettier
+* `prettier:write`: Formats code with Prettier
+* `lint`: Lints code with ESLint
+* `test`: Tests Angular app with Karma
+* `test:ci`: Tests Angular app with Karma in headless mode
+* `test:coverage`: Tests Angular app with Karma in headless mode and code coverage
+* `prepare`: Prepare script to install Husky
+
 ## Setup
 * In project root run `npm install` to install dependencies
 * Script `prepare` should run with `npm install` to install husky, if not, run `npm run prepare`
