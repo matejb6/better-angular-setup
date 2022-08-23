@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { RoutesService } from '@core/routes/routes.service';
 
 const routesService: RoutesService = new RoutesService();
-const pathToDefaultView = routesService.getRoutePaths().welcome;
+
 const routes: Routes = [
   {
-    path: '', // no route
-    redirectTo: pathToDefaultView,
+    path: '',
+    redirectTo: routesService.getRoutes().welcome,
     pathMatch: 'full'
   },
   {

@@ -7,20 +7,9 @@ export class RoutesService {
   /**
    * @description Routes
    */
-  private readonly routes: Routes;
-  /**
-   * @description Route paths
-   */
-  private readonly routePaths: Routes;
-
-  constructor() {
-    this.routes = {
-      welcome: 'welcome'
-    };
-    this.routePaths = {
-      welcome: '/' + this.routes.welcome
-    };
-  }
+  private readonly routes: Routes = {
+    welcome: 'welcome'
+  };
 
   /**
    * @returns Routes
@@ -28,14 +17,6 @@ export class RoutesService {
    */
   public getRoutes(): Routes {
     return this.routes;
-  }
-
-  /**
-   * @returns Route paths
-   * @description Returns route paths
-   */
-  public getRoutePaths(): Routes {
-    return this.routePaths;
   }
 }
 
