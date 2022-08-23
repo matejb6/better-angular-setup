@@ -59,8 +59,8 @@ To commit code successfully, check `Prettier` and `Lint` paragraphs of this file
 
 ## Test
 * In project root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
-* In project root run `npm test:ci` to execute the unit tests in headless mode
-* In project root run `npm test:coverage` to execute the unit tests in headless mode with coverage
+* In project root run `npm run test:ci` to execute the unit tests in headless mode
+* In project root run `npm run test:coverage` to execute the unit tests in headless mode with coverage
 
 ## New version
 * Go to GitHub repo
