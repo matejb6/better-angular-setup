@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { WelcomeViewComponent } from './welcome-view.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: WelcomeViewComponent
-  }
-];
-
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild([
+      {
+        path: '',
+        component: WelcomeViewComponent
+      }
+    ])
+  ],
   exports: [RouterModule]
 })
 export class WelcomeViewRoutingModule {}
