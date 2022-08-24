@@ -13,6 +13,12 @@ const routes: Routes = [
     path: '',
     redirectTo: appRoutes.welcome,
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    title: 'Ng Custom Setup • Page not found',
+    loadChildren: () =>
+      import('./views/page-not-found-view/page-not-found-view.module').then((m) => m.PageNotFoundViewModule)
   }
 ];
 
