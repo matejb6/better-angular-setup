@@ -11,17 +11,12 @@ import { LibraryDialogComponent } from '@shared/components/library-dialog/librar
   styleUrls: ['./welcome-view.component.scss']
 })
 export class WelcomeViewComponent {
-  public readonly title: string;
-  public readonly paragraph: string;
-  public readonly libraries: Library[];
-  public readonly message: string;
+  public readonly title: string = 'Hey developer';
+  public readonly paragraph: string = 'This is custom Angular app setup which includes:';
+  public readonly libraries: Library[] = libraries;
+  public readonly message: string = 'This is just the beginning, it is your turn now :)...';
 
-  constructor(private dialogService: DialogService) {
-    this.title = 'Hey developer';
-    this.paragraph = 'This is custom Angular app setup which includes:';
-    this.libraries = libraries;
-    this.message = 'This is just the beginning, it is your turn now :)...';
-  }
+  constructor(private dialogService: DialogService) {}
 
   /**
    * @public
