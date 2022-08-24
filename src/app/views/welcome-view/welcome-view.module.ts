@@ -5,7 +5,7 @@ import { SharedModule } from '@shared/shared.module';
 import { WelcomeViewComponent } from './welcome-view.component';
 
 @NgModule({
-  imports: [WelcomeViewRoutingModule, SharedModule],
+  imports: [SharedModule, WelcomeViewRoutingModule],
   exports: [],
   declarations: [WelcomeViewComponent],
   providers: []

@@ -5,7 +5,7 @@ import { PageNotFoundViewRoutingModule } from './page-not-found-view-routing.mod
 import { PageNotFoundViewComponent } from './page-not-found-view.component';
 
 @NgModule({
-  imports: [PageNotFoundViewRoutingModule, SharedModule],
+  imports: [SharedModule, PageNotFoundViewRoutingModule],
   exports: [],
   declarations: [PageNotFoundViewComponent],
   providers: []
