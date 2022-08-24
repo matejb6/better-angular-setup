@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { RoutesService } from '@core/routes/routes.service';
-
-const routesService: RoutesService = new RoutesService();
+import { appRoutes } from '@core/routes/app-routes';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: routesService.getRoutes().welcome,
-    pathMatch: 'full'
+    path: appRoutes.welcome,
+    loadChildren: () => import('./views/welcome-view/welcome-view.module').then((m) => m.WelcomeViewModule)
   },
   {
-    path: routesService.getRoutes().welcome,
-    loadChildren: () => import('./views/welcome-view/welcome-view.module').then((m) => m.WelcomeViewModule)
+    path: '',
+    redirectTo: appRoutes.welcome,
+    pathMatch: 'full'
   }
 ];
 
