@@ -6,11 +6,11 @@ import { DialogService } from '@shared/services/dialog.service';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
 
 @Component({
-  selector: 'app-welcome-view',
-  templateUrl: './welcome-view.component.html',
-  styleUrls: ['./welcome-view.component.scss']
+  selector: 'app-welcome',
+  templateUrl: './welcome.component.html',
+  styleUrls: ['./welcome.component.scss']
 })
-export class WelcomeViewComponent {
+export class WelcomeComponent {
   public readonly title: string = 'Hey developer';
   public readonly paragraph: string = 'This is custom Angular app setup which includes:';
   public readonly libraries: Library[] = libraries;

@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: appRoutes.welcome,
     title: 'Ng Custom Setup • Welcome',
-    loadChildren: () => import('./views/welcome-view/welcome-view.module').then((m) => m.WelcomeViewModule)
+    loadChildren: () => import('./views/welcome/welcome.module').then((m) => m.WelcomeModule)
   },
   {
     path: '',
@@ -17,8 +17,7 @@ const routes: Routes = [
   {
     path: '**',
     title: 'Ng Custom Setup • Page not found',
-    loadChildren: () =>
-      import('./views/page-not-found-view/page-not-found-view.module').then((m) => m.PageNotFoundViewModule)
+    loadChildren: () => import('./views/page-not-found/page-not-found.module').then((m) => m.PageNotFoundModule)
   }
 ];
 
