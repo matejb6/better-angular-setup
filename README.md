@@ -13,7 +13,7 @@ Default Angular app extended with additional libraries and setup to help make ap
 Includes additional libraries and setup, such as GitHub Actions setup, code formatting, pre commit hooks, etc.
 
 ## App creation
-Project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+The app was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Requirements
 * node.js v14.0 and higher
