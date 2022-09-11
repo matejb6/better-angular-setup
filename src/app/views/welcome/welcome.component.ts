@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { libraries } from '@core/data/libraries';
 import { Library } from '@core/interfaces/library';
-import { DialogService } from '@shared/services/dialog.service';
+import { DialogService } from '@shared/services/dialog/dialog.service';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
 
 @Component({
