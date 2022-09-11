@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { SharedModule } from '@shared/shared.module';
-import { ComponentsModule } from '../components.module';
+import { LibraryDialogModule } from './library-dialog.module';
 import { LibraryDialogComponent } from './library-dialog.component';
 import { librariesMock } from '@core/data/libraries.mock';
 import { LibraryDialogComponentQuery } from './library-dialog.component.query.spec';
@@ -14,7 +13,7 @@ describe('LibraryDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComponentsModule, SharedModule],
+      imports: [LibraryDialogModule],
       providers: [{ provide: MAT_DIALOG_DATA, useValue: librariesMock[0] }]
     }).compileComponents();
 
@@ -27,6 +26,7 @@ describe('LibraryDialogComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
   it('should render dialog title', () => {
     expect(LibraryDialogComponentQuery.getDialogTitle(nativeElem)).toBeTruthy();
   });
