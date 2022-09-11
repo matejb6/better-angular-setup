@@ -6,7 +6,7 @@ import { appRoutes } from '@core/routes/app-routes';
 const routes: Routes = [
   {
     path: appRoutes.welcome,
-    title: 'Ng Custom Setup • Welcome',
+    title: 'NCS • Welcome',
     loadChildren: () => import('./views/welcome/welcome.module').then((m) => m.WelcomeModule)
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    title: 'Ng Custom Setup • Page not found',
+    title: 'NCS • Page Not Found',
     loadChildren: () => import('./views/page-not-found/page-not-found.module').then((m) => m.PageNotFoundModule)
   }
 ];
