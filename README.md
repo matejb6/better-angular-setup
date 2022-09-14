@@ -9,8 +9,16 @@
 ![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
 
 ## About
-Default Angular app extended with additional libraries and setup to help make apps even better.
-Includes additional libraries and setup, such as GitHub Actions setup, code formatting, pre commit hooks, etc.
+Default Angular app extended with additional libraries and setup to help develop better apps.
+Main idea is to present an Angular app with additional setup so developers can have it as a reference.
+Includes GitHub Actions workflows, code formatting, code linting, pre commit hooks, etc.
+The app has additional Karma setup for nicer reports.
+Each component is covered with tests too.
+
+## Content
+The app consists of one view with library cards, which represents libraries added to default Angular app.
+By clicking the card, dialog opens with additional information and link to library homepage.
+Also, there is a Page Not Found view for unavailable routes.
 
 ## App creation
 The app was generated with [Angular CLI](https://github.com/angular/angular-cli).
