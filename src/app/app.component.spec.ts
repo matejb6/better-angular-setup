@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
+import { AppComponentQuery } from './app.component.query.spec';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -21,5 +22,9 @@ describe('AppComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render toolbar', () => {
+    expect(AppComponentQuery.getToolbar(nativeElem)).toBeTruthy();
   });
 });

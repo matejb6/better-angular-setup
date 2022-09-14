@@ -1,4 +1,4 @@
-export class WelcomeViewComponentQuery {
+export class WelcomeComponentQuery {
   public static getTitle(parentElem: HTMLElement): HTMLHeadingElement | null {
     return parentElem.querySelector('h1');
   }
@@ -8,7 +8,7 @@ export class WelcomeViewComponentQuery {
   }
 
   public static getFirstLibraryCard(parentElem: HTMLElement): HTMLElement | null {
-    return WelcomeViewComponentQuery.getLibraryCards(parentElem).item(0).querySelector('mat-card.card');
+    return WelcomeComponentQuery.getLibraryCards(parentElem).item(0).querySelector('mat-card.card');
   }
 
   public static getLibraryDialog(): Element | null {
@@ -16,6 +16,6 @@ export class WelcomeViewComponentQuery {
   }
 
   public static getLibraryDialogOkButton(): HTMLButtonElement | null | undefined {
-    return WelcomeViewComponentQuery.getLibraryDialog()?.querySelector('button.mat-primary');
+    return WelcomeComponentQuery.getLibraryDialog()?.querySelector('button.mat-primary');
   }
 }

@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatRippleModule } from '@angular/material/core';
 
-import { LibraryCardComponent } from './library-card/library-card.component';
-import { LibraryDialogComponent } from './library-dialog/library-dialog.component';
+import { LibraryCardModule } from './library-card/library-card.module';
+import { LibraryDialogModule } from './library-dialog/library-dialog.module';
 
 @NgModule({
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatDialogModule, MatRippleModule],
-  exports: [LibraryCardComponent, LibraryDialogComponent],
-  declarations: [LibraryCardComponent, LibraryDialogComponent],
+  imports: [LibraryCardModule, LibraryDialogModule],
+  exports: [LibraryCardModule, LibraryDialogModule],
+  declarations: [],
   providers: []
 })
 export class ComponentsModule {}

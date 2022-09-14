@@ -8,21 +8,17 @@ import { Library } from '@core/interfaces/library';
   styleUrls: ['./library-card.component.scss']
 })
 export class LibraryCardComponent {
-  @Input() public libraryCard: Library;
-  @Output() public cardClick: EventEmitter<Library>;
-  public readonly defaultImage: string;
+  @Input() public libraryCard: Library = {
+    logoPath: '',
+    name: '',
+    description: '',
+    link: '',
+    stepsToAdd: []
+  };
+  @Output() public cardClick: EventEmitter<Library> = new EventEmitter<Library>();
+  public readonly defaultImage: string = '../../../../assets/logos/image.svg';
 
-  constructor() {
-    this.libraryCard = {
-      logoPath: '',
-      name: '',
-      description: '',
-      link: '',
-      stepsToAdd: []
-    };
-    this.cardClick = new EventEmitter<Library>();
-    this.defaultImage = '../../../../assets/logos/image.svg';
-  }
+  constructor() {}
 
   /**
    * @public

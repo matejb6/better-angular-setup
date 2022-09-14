@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { RoutesService } from '@core/routes/routes.service';
+import { appRoutes } from './app-routes';
 
-const routesService: RoutesService = new RoutesService();
-const pathToDefaultView = routesService.getRoutePaths().welcome;
 const routes: Routes = [
   {
-    path: '', // no route
-    redirectTo: pathToDefaultView,
+    path: appRoutes.welcome,
+    title: 'NCS • Welcome',
+    loadChildren: () => import('./views/welcome/welcome.module').then((m) => m.WelcomeModule)
+  },
+  {
+    path: '',
+    redirectTo: appRoutes.welcome,
     pathMatch: 'full'
   },
   {
-    path: routesService.getRoutes().welcome,
-    loadChildren: () => import('./views/welcome-view/welcome-view.module').then((m) => m.WelcomeViewModule)
+    path: '**',
+    title: 'NCS • Page Not Found',
+    loadChildren: () => import('./views/page-not-found/page-not-found.module').then((m) => m.PageNotFoundModule)
   }
 ];
 

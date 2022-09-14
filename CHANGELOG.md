@@ -9,6 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.1.0] - 2022-09-14
+### Added
+- About package section in readme
+- Route titles
+- Page not found view
+- App component tests
+- Toolbar module
+- Dialog module
+- Library card module
+- Library dialog module
+### Changed
+- Routes service replaced with app routes
+- Routing modules setup
+- Component classes init
+- Layout module to its own folder
+- Library cards centered on welcome view
+### Fixed
+- Readme test scripts references
+- Husky pre commit hooks
+
 ## [1.0.0] - 2022-07-30
 ### Added
 - Components tests query classes

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentsModule } from '../components.module';
+import { LibraryCardModule } from './library-card.module';
 import { LibraryCardComponent } from './library-card.component';
 import { librariesMock } from '@core/data/libraries.mock';
 import { LibraryCardComponentQuery } from './library-card.component.query.spec';
@@ -12,7 +12,7 @@ describe('LibraryCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComponentsModule]
+      imports: [LibraryCardModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LibraryCardComponent);

@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarComponent } from './toolbar.component';
 
 @NgModule({
   imports: [HttpClientModule, MatIconModule, MatToolbarModule],
@@ -11,4 +11,4 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
   declarations: [ToolbarComponent],
   providers: []
 })
-export class LayoutModule {}
+export class ToolbarModule {}
