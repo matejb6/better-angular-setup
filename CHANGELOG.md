@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.1.1] - 2022-10-05
+### Added
+- Elevation to toolbar and library card components
+
 ## [1.1.0] - 2022-09-14
 ### Added
 - About package section in readme
