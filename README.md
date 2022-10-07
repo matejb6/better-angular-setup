@@ -8,6 +8,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
 
+![App screenshot](./src/assets/img/app-screenshot.png 'App screenshot')
+
 ## About
 Default Angular app extended with additional libraries and setup to help develop better apps.
 Main idea is to present an Angular app with additional setup so developers can have it as a reference.
