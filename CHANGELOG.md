@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.2.0] - 2022-10-19
+### Changed
+- App component template structure
+- Package additional info
+- Package dependencies
+
 ## [1.1.2] - 2022-10-07
 ### Added
 - Package additional info
