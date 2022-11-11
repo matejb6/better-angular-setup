@@ -21,8 +21,7 @@ export class LibraryCardComponent {
   constructor() {}
 
   /**
-   * @public
-   * @description On card click, emits and event of current library card data
+   * On card click, emits and event of current library card data
    */
   public onCardClick(): void {
     this.cardClick.emit(this.libraryCard);

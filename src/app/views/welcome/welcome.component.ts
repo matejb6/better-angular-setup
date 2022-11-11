@@ -19,9 +19,8 @@ export class WelcomeComponent {
   constructor(private dialogService: DialogService) {}
 
   /**
-   * @public
+   * Opens dialog on card click
    * @param event Event data
-   * @description Opens dialog on card click
    */
   public onCardClick(event: Library): void {
     this.dialogService.openDialog(LibraryDialogComponent, event);
