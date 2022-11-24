@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 
 import { libraries } from '@core/data/libraries';
 import { Library } from '@core/interfaces/library';
-import { DialogService } from '@shared/services/dialog/dialog.service';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
+import { DialogService } from '@shared/services/dialog/dialog.service';
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  selector: 'app-welcome-view',
+  templateUrl: './welcome-view.component.html',
+  styleUrls: ['./welcome-view.component.scss']
 })
-export class WelcomeComponent {
+export class WelcomeViewComponent {
   public readonly title: string = 'Hey developer';
   public readonly paragraph: string = 'This is custom Angular app setup which includes:';
   public readonly libraries: Library[] = libraries;
