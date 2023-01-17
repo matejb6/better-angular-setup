@@ -4,7 +4,7 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/matejb6/ng-custom-setup)
 ![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/ng-custom-setup)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/matejb6/ng-custom-setup/CI)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/matejb6/ng-custom-setup/ci.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
 
@@ -45,6 +45,22 @@ The app was generated with [Angular CLI](https://github.com/angular/angular-cli)
 * `test:coverage`: Tests Angular app with Karma in headless mode and outputs code coverage
 * `prepare`: Prepare script to install Husky
 
+## Commit hooks
+Pre commit hooks are used to check code with `Prettier` and `ESLint`.
+Before each commit, staged files are checked with defined scripts and committing of unchecked code will be prevented.
+To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
+
+## Git branching strategy
+Two branches are present always and they should be merged from pull request:
+* `main` branch containing code ready for new versions
+* `dev` branch containing development advancements
+
+Other branches (dynamic branches) contain specific changes should have following prefixes, depending on type of changes they contain. Brief and descriptive description should be added after slash (e.g. feature/about-view):
+* `feature/` for new features
+* `issue/` for issues
+* `update/` for updates (files, dependencies, code, etc.)
+* `other/` for other changes
+
 ## GitHub Actions
 Defined workflows:
 * `CI` as a general CI workflow
@@ -52,14 +68,8 @@ Defined workflows:
 
 For more details see `.github/workflows/`.
 
-## Commit hooks
-Pre commit hooks are used to check code with `Prettier` and `ESLint`.
-Before each commit, staged files are checked with defined scripts and committing of unchecked code will be prevented.
-To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
-
 ## Requirements
-* node.js v14.0 and higher
-* npm v6.0 and higher
+* node.js v14.15.0
 
 ## Setup
 * In root run `npm install` to install dependencies

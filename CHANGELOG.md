@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Readme git branching strategy
 ### Changed
-- Package dependencies
+- Package dependencies and engines
+- Readme requirements
+- Angular analytics disabled
 ### Fixed
+- Readme shields.io GitHub Actions Workflow badge
 
 ## [1.2.0] - 2022-10-19
 ### Changed
