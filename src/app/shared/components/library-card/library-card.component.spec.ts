@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { librariesMock } from '@data/libraries.mock';
 import { LibraryCardModule } from './library-card.module';
 import { LibraryCardComponent } from './library-card.component';
-import { librariesMock } from '@core/data/libraries.mock';
 import { LibraryCardComponentQuery } from './library-card.component.query.spec';
 
 describe('LibraryCardComponent', () => {

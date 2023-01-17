@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { Library } from '@core/interfaces/library';
-import { libraries } from './libraries';
+import { libraries } from '@data/libraries';
 
 @Injectable({
   providedIn: 'root'
