@@ -4,7 +4,7 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/matejb6/ng-custom-setup)
 ![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/ng-custom-setup)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/matejb6/ng-custom-setup/CI)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/matejb6/ng-custom-setup/ci.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
 
@@ -45,6 +45,22 @@ The app was generated with [Angular CLI](https://github.com/angular/angular-cli)
 * `test:coverage`: Tests Angular app with Karma in headless mode and outputs code coverage
 * `prepare`: Prepare script to install Husky
 
+## Commit hooks
+Pre commit hooks are used to check code with `Prettier` and `ESLint`.
+Before each commit, staged files are checked with defined scripts and committing of unchecked code will be prevented.
+To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
+
+## Git branching strategy
+Two branches are present always and they should be merged from pull request:
+* `main` branch containing code ready for new versions
+* `dev` branch containing development advancements
+
+Other branches (dynamic branches) contain specific changes should have following prefixes, depending on type of changes they contain. Brief and descriptive description should be added after slash (e.g. feature/about-view):
+* `feature/` for new features
+* `issue/` for issues
+* `update/` for updates (files, dependencies, code, etc.)
+* `other/` for other changes
+
 ## GitHub Actions
 Defined workflows:
 * `CI` as a general CI workflow
@@ -52,38 +68,32 @@ Defined workflows:
 
 For more details see `.github/workflows/`.
 
-## Commit hooks
-Pre commit hooks are used to check code with `Prettier` and `ESLint`.
-Before each commit, staged files are checked with defined scripts and committing of unchecked code will be prevented.
-To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
-
 ## Requirements
-* node.js v14.0 and higher
-* npm v6.0 and higher
+* node.js v14.15.0
 
 ## Setup
-* In project root run `npm install` to install dependencies
+* In root run `npm install` to install dependencies
 * Script `prepare` should run with `npm install` to install husky, if not, run `npm run prepare`
 
 ## Start
-* In project root run `npm start` to start dev server
+* In root run `npm start` to start dev server
 * Navigate to `http://localhost:4200/`
 * The app will automatically reload if you change any of the source files
 
 ## Build
-* In project root run `npm run build` to build the project
+* In root run `npm run build` to build the app
 
 ## Prettier
-* In project root run `npm run prettier:check` to check if files are formatted
-* In project root run `npm run prettier:write` to format files
+* In root run `npm run prettier:check` to check if files are formatted with [Prettier](https://prettier.io)
+* In root run `npm run prettier:write` to format files
 
 ## Lint
-* In project root run `npm run lint` to lint the project
+* In root run `npm run lint` to lint the app with [ESLint](https://eslint.org)
 
 ## Test
-* In project root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
-* In project root run `npm run test:ci` to execute the unit tests in headless mode
-* In project root run `npm run test:coverage` to execute the unit tests in headless mode with coverage
+* In root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
+* In root run `npm run test:ci` to execute the unit tests in headless mode
+* In root run `npm run test:coverage` to execute the unit tests in headless mode with coverage
 
 ## New version
 * Go to GitHub repo

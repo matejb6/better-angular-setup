@@ -15,8 +15,7 @@ export class ToolbarComponent {
   }
 
   /**
-   * @private
-   * @description Adds Angular SVG icon to registry
+   * Adds Angular SVG icon to registry
    */
   private addAngularSvgIconToRegistry(): void {
     this.iconRegistry.addSvgIcon(

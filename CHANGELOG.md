@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.3.0] - 2023-01-17
+### Added
+- Readme git branching strategy
+### Changed
+- Comments in code
+- Prettier default rule removed from prettierrc
+- Package dependencies and engines
+- View components "view" suffix added
+- Dialog service simplified and improved with generics
+- Readme requirements
+- Angular analytics disabled
+### Fixed
+- Readme shields.io GitHub Actions Workflow badge
+
 ## [1.2.0] - 2022-10-19
 ### Changed
 - App component template structure
