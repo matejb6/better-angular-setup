@@ -4,7 +4,7 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/matejb6/ng-custom-setup)
 ![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/ng-custom-setup)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/matejb6/ng-custom-setup/CI)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/matejb6/ng-custom-setup/ci.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
 
