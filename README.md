@@ -69,8 +69,7 @@ Defined workflows:
 For more details see `.github/workflows/`.
 
 ## Requirements
-* node.js v14.0 and higher
-* npm v6.0 and higher
+* node.js v14.15.0
 
 ## Setup
 * In root run `npm install` to install dependencies
