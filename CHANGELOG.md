@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.4.0] - 2023-01-18
+### Added
+- Data service
+### Changed
+- Unnecessary info removed from readme
+- Libraries mock moved to separate data folder
+
 ## [1.3.0] - 2023-01-17
 ### Added
 - Readme git branching strategy

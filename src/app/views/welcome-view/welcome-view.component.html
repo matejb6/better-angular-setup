@@ -3,7 +3,7 @@
 
 <div class="libraries">
   <app-library-card
-    *ngFor="let library of libraries"
+    *ngFor="let library of $libraries | async"
     [libraryCard]="library"
     (cardClick)="onCardClick($event)"
   ></app-library-card>

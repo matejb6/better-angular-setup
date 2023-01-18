@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { librariesMock } from '@data/libraries.mock';
 import { DialogModule } from './dialog.module';
 import { DialogService } from './dialog.service';
-import { librariesMock } from '@core/data/libraries.mock';
 import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
 
 describe('DialogService', () => {
