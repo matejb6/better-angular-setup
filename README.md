@@ -1,10 +1,8 @@
 # Ng Custom Setup
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/matejb6/ng-custom-setup)
-![GitHub Release Date](https://img.shields.io/github/release-date/matejb6/ng-custom-setup)
-![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/ng-custom-setup)
-
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/matejb6/ng-custom-setup/ci.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/ng-custom-setup)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/matejb6/ng-custom-setup)
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
 
@@ -12,14 +10,12 @@
 
 ## About
 Default Angular app extended with additional libraries and setup to help develop better apps.
-Main idea is to present an Angular app with additional setup so developers can have it as a reference.
-Includes GitHub Actions workflows, code formatting, code linting, pre commit hooks, etc.
-The app has additional Karma setup for nicer reports.
-Each component is covered with tests too.
+Main idea is to present an Angular app with additional setup and practices as a reference for developers.
+Includes GitHub Actions workflows, code formatting, code linting, pre commit hooks, unit tests, code separation by modules, Karma setup for better looking test reports, etc.
 
 ## Content
 The app consists of one view with library cards, which represents libraries added to default Angular app.
-By clicking the card, dialog opens with additional information and link to library homepage.
+By clicking on card, dialog opens with additional information and link to library homepage.
 Also, there is a Page Not Found view for unavailable routes.
 
 ## App creation
@@ -102,29 +98,3 @@ For more details see `.github/workflows/`.
 * Click `Run workflow`
 * Select branch and enter next version (eg. major, minor, patch)
 * New version is created, commit and tag are pushed to repo
-
-## New release
-* Go to GitHub repo
-* Click on `Releases`
-* Click on `Create a new release`
-* Select a tag
-* Enter release title
-* Add release description from changelog notes
-
-## App structure
-App has following structure:
-* App root located in `src/app`
-* App core module located in `src/app/core`
-* App shared module located in `src/app/shared`
-* App views located in `src/app/views`
-### Root
-This is the app root setup.
-### Core
-This module contains core setup, used for singleton services, data services, auth, etc.
-### Shared
-This module is used for storing shared functionality, such as various services, pipes, etc.
-### Views
-This folder contains all views.
-
-## Developer
-**Matej Buljan**
