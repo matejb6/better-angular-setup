@@ -10,14 +10,12 @@
 
 ## About
 Default Angular app extended with additional libraries and setup to help develop better apps.
-Main idea is to present an Angular app with additional setup so developers can have it as a reference.
-Includes GitHub Actions workflows, code formatting, code linting, pre commit hooks, etc.
-The app has additional Karma setup for nicer reports.
-Each component is covered with tests too.
+Main idea is to present an Angular app with additional setup and practices as a reference for developers.
+Includes GitHub Actions workflows, code formatting, code linting, pre commit hooks, unit tests, code separation by modules, Karma setup for better looking test reports, etc.
 
 ## Content
 The app consists of one view with library cards, which represents libraries added to default Angular app.
-By clicking the card, dialog opens with additional information and link to library homepage.
+By clicking on card, dialog opens with additional information and link to library homepage.
 Also, there is a Page Not Found view for unavailable routes.
 
 ## App creation
