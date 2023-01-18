@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Data service
 ### Changed
+- Unnecessary info removed from readme
 - Libraries mock moved to separate data folder
 ### Fixed
 
