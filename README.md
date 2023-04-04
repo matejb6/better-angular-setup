@@ -21,14 +21,7 @@ Also, there is a Page Not Found view for unavailable routes.
 ## App creation
 The app was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-## Additional packages
-* `Angular Router` added during new app setup with: `ng new`
-* `Angular Material` added with: `ng add @angular/material`
-* `ESLint` added with: `ng add @angular-eslint/schematics`
-* `Prettier` added with: `npm install prettier --save-dev`
-* `Husky` added with: `npm install husky --save-dev`
-
-## About package
+## Package
 ### Scripts
 * `start`: Starts Angular development server and serves the app
 * `build`: Builds Angular app
@@ -40,6 +33,13 @@ The app was generated with [Angular CLI](https://github.com/angular/angular-cli)
 * `test:ci`: Tests Angular app with Karma in headless mode
 * `test:coverage`: Tests Angular app with Karma in headless mode and outputs code coverage
 * `prepare`: Prepare script to install Husky
+
+### Additional packages
+* `Angular Router` added during new app setup with: `ng new`
+* `Angular Material` added with: `ng add @angular/material`
+* `ESLint` added with: `ng add @angular-eslint/schematics`
+* `Prettier` added with: `npm install prettier --save-dev`
+* `Husky` added with: `npm install husky --save-dev`
 
 ## Commit hooks
 Pre commit hooks are used to check code with `Prettier` and `ESLint`.
