@@ -38,8 +38,8 @@ The app was generated with [Angular CLI](https://github.com/angular/angular-cli)
 * `Angular Router` added during new app setup with: `ng new`
 * `Angular Material` added with: `ng add @angular/material`
 * `ESLint` added with: `ng add @angular-eslint/schematics`
-* `Prettier` added with: `npm install prettier --save-dev`
 * `Husky` added with: `npm install husky --save-dev`
+* `Prettier` added with: `npm install prettier --save-dev`
 
 ## Commit hooks
 Pre commit hooks are used to check code with `Prettier` and `ESLint`.
