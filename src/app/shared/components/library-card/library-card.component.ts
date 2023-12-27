@@ -18,8 +18,6 @@ export class LibraryCardComponent {
   @Output() public cardClick: EventEmitter<Library> = new EventEmitter<Library>();
   public readonly defaultImage: string = '../../../../assets/logos/image.svg';
 
-  constructor() {}
-
   /**
    * On card click, emits and event of current library card data
    */

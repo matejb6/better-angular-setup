@@ -10,8 +10,6 @@ import { libraries } from '@data/libraries';
 export class DataService {
   private librariesBehaviorSubject: BehaviorSubject<Library[]> = new BehaviorSubject<Library[]>(libraries);
 
-  constructor() {}
-
   /**
    * Returns libraries behavior subject as observable
    * @returns Libraries observable
