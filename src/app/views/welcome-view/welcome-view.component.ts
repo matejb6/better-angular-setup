@@ -17,7 +17,10 @@ export class WelcomeViewComponent {
   public readonly message: string = 'This is just the beginning, it is your turn now :)...';
   public $libraries: Observable<Library[]> = this.dataService.getLibrariesObs();
 
-  constructor(private dataService: DataService, private dialogService: DialogService) {}
+  constructor(
+    private dataService: DataService,
+    private dialogService: DialogService
+  ) {}
 
   /**
    * Opens dialog on card click

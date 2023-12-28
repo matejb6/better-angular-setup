@@ -82,7 +82,7 @@ describe('LibraryDialogComponent', () => {
   });
 
   it('should align dialog actions to end', () => {
-    expect(LibraryDialogComponentQuery.getDialogActions(nativeElem)).toHaveClass('mat-dialog-actions-align-end');
+    expect(LibraryDialogComponentQuery.getDialogActions(nativeElem)).toHaveClass('mat-mdc-dialog-actions-align-end');
   });
 
   it('should not have dialog actions link button as primary', () => {
