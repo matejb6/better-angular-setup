@@ -1,6 +1,6 @@
 {
   "name": "ng-custom-setup",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Default Angular app extended with additional libraries and setup to help develop better apps",
   "scripts": {
     "ng": "ng",
