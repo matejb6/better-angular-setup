@@ -8,9 +8,8 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-coverage'),
       require('karma-jasmine-html-reporter'),
-      require('karma-spec-reporter'),
+      require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
@@ -33,13 +32,8 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['kjhtml', 'spec'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome', 'ChromeHeadless'],
-    singleRun: false,
+    reporters: ['progress', 'kjhtml'],
+    browsers: ['Chrome'],
     restartOnFileChange: true
   });
 };

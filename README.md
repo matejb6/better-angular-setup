@@ -14,12 +14,12 @@ Main idea is to present an Angular app with additional setup and practices as a 
 Includes GitHub Actions workflows, code formatting, code linting, pre commit hooks, unit tests, code separation by modules, Karma setup for better looking test reports, etc.
 
 ## Content
-The app consists of one view with library cards, which represents libraries added to default Angular app.
+This app consists of one view with library cards, which represents libraries added to default Angular app.
 By clicking on card, dialog opens with additional information and link to library homepage.
 Also, there is a Page Not Found view for unavailable routes.
 
 ## App creation
-The app was generated with [Angular CLI](https://github.com/angular/angular-cli).
+This app was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Package
 ### Scripts
@@ -65,7 +65,7 @@ Defined workflows:
 For more details see `.github/workflows/`.
 
 ## Requirements
-* node.js v14.15.0
+* node.js v14.20.0
 
 ## Setup
 * In root run `npm install` to install dependencies
@@ -87,6 +87,7 @@ For more details see `.github/workflows/`.
 * In root run `npm run lint` to lint the app with [ESLint](https://eslint.org)
 
 ## Test
+* Add `Karma config` by running the following command: `ng generate config karma`
 * In root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
 * In root run `npm run test:ci` to execute the unit tests in headless mode
 * In root run `npm run test:coverage` to execute the unit tests in headless mode with coverage

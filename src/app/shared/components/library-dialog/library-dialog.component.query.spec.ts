@@ -1,10 +1,10 @@
 export class LibraryDialogComponentQuery {
   public static getDialogTitle(parentElem: HTMLElement): HTMLElement | null {
-    return parentElem.querySelector('h1.mat-dialog-title');
+    return parentElem.querySelector('h1.mat-mdc-dialog-title');
   }
 
   public static getDialogContent(parentElem: HTMLElement): HTMLElement | null {
-    return parentElem.querySelector('mat-dialog-content.mat-dialog-content');
+    return parentElem.querySelector('mat-dialog-content.mat-mdc-dialog-content');
   }
 
   public static getDialogContentDescription(parentElem: HTMLElement): HTMLParagraphElement | null | undefined {
@@ -20,14 +20,14 @@ export class LibraryDialogComponentQuery {
   }
 
   public static getDialogActions(parentElem: HTMLElement): HTMLElement | null {
-    return parentElem.querySelector('mat-dialog-actions.mat-dialog-actions');
+    return parentElem.querySelector('mat-dialog-actions.mat-mdc-dialog-actions');
   }
 
   public static getDialogActionsLinkButton(parentElem: HTMLElement): HTMLAnchorElement | null | undefined {
-    return LibraryDialogComponentQuery.getDialogActions(parentElem)?.querySelector('a.mat-raised-button');
+    return LibraryDialogComponentQuery.getDialogActions(parentElem)?.querySelector('a.mat-mdc-raised-button');
   }
 
   public static getDialogActionsOkButton(parentElem: HTMLElement): HTMLButtonElement | null | undefined {
-    return LibraryDialogComponentQuery.getDialogActions(parentElem)?.querySelector('button.mat-raised-button');
+    return LibraryDialogComponentQuery.getDialogActions(parentElem)?.querySelector('button.mat-mdc-raised-button');
   }
 }
