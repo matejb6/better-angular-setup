@@ -34,12 +34,8 @@ describe('LibraryCardComponent', () => {
     expect(LibraryCardComponentQuery.getCardTitle(nativeElem)).toBeTruthy();
   });
 
-  it('should render card content', () => {
-    expect(LibraryCardComponentQuery.getCardContent(nativeElem)).toBeTruthy();
-  });
-
   it('should render card image', () => {
-    expect(LibraryCardComponentQuery.getCardContentImage(nativeElem)).toBeTruthy();
+    expect(LibraryCardComponentQuery.getCardImage(nativeElem)).toBeTruthy();
   });
 
   it('should have title', () => {

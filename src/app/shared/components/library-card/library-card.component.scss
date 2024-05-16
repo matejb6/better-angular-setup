@@ -1,4 +1,5 @@
 $card-height: 300px;
+$image-width: 150px;
 
 :host {
   display: block;
@@ -15,16 +16,10 @@ $card-height: 300px;
       background-color: lightgreen;
     }
 
-    mat-card-content {
-      display: flex;
-      height: $card-height - 50px;
-      justify-content: center;
-      align-items: center;
-
-      img.logo {
-        width: 150px;
-        height: fit-content;
-      }
+    img.logo {
+      align-self: center;
+      top: 40px;
+      width: $image-width;
     }
   }
 }
