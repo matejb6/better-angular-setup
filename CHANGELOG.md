@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.6.0] - 2024-01-25
+### Added
+### Changed
+- Angular update from 15 to 16
+- Package dependencies
+- TS Config env path removed
+### Fixed
+- Library Card title position
+- Library Card image moving on click
+
 ## [1.5.0] - 2023-12-28
 ### Added
 - VS Code files
@@ -18,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Deprecated files removed
 - Karma config
 - Readme
+- Code according to ESLint update
 
 ## [1.4.2] - 2023-04-26
 ### Changed
