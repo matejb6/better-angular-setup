@@ -7,11 +7,7 @@ export class LibraryCardComponentQuery {
     return LibraryCardComponentQuery.getCard(parentElem)?.querySelector('mat-card-title');
   }
 
-  public static getCardContent(parentElem: HTMLElement): HTMLElement | null | undefined {
-    return LibraryCardComponentQuery.getCard(parentElem)?.querySelector('mat-card-content');
-  }
-
-  public static getCardContentImage(parentElem: HTMLElement): HTMLImageElement | null | undefined {
-    return LibraryCardComponentQuery.getCardContent(parentElem)?.querySelector('img.logo');
+  public static getCardImage(parentElem: HTMLElement): HTMLImageElement | null | undefined {
+    return LibraryCardComponentQuery.getCard(parentElem)?.querySelector('img.logo');
   }
 }

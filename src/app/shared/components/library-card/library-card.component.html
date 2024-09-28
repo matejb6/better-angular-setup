@@ -1,6 +1,6 @@
 <mat-card mat-ripple class="mat-elevation-z2 card" (click)="onCardClick()">
-  <mat-card-title>{{ libraryCard.name }}</mat-card-title>
-  <mat-card-content>
-    <img class="logo" [src]="libraryCard.logoPath || defaultImage" alt="No image" />
-  </mat-card-content>
+  <mat-card-header>
+    <mat-card-title>{{ libraryCard.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="logo" [src]="libraryCard.logoPath || defaultImage" alt="No image" />
 </mat-card>
