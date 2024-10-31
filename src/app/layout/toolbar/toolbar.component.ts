@@ -5,7 +5,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {
   public toolbarTitle = 'Ng Custom Setup';
