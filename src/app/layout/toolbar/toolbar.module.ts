@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { ToolbarComponent } from './toolbar.component';
 
 @NgModule({
-  imports: [HttpClientModule, MatIconModule, MatToolbarModule],
+  imports: [MatIconModule, MatToolbarModule],
   exports: [ToolbarComponent],
   declarations: [ToolbarComponent],
   providers: []

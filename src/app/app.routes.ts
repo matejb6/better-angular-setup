@@ -1,9 +1,14 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
-import { appRoutes } from './app-routes';
+export interface AppRoutes {
+  welcome: string;
+}
 
-const routes: Routes = [
+export const appRoutes: AppRoutes = {
+  welcome: 'welcome'
+};
+
+export const routes: Routes = [
   {
     path: appRoutes.welcome,
     title: 'NCS • Welcome',
@@ -21,9 +26,3 @@ const routes: Routes = [
       import('./views/page-not-found-view/page-not-found-view.module').then((m) => m.PageNotFoundViewModule)
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}
