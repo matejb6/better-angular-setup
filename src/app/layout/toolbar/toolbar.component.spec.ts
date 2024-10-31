@@ -38,6 +38,6 @@ describe('ToolbarComponent', () => {
   });
 
   it('should have toolbar title', () => {
-    expect(ToolbarComponentQuery.getToolbarTitle(nativeElem)?.innerText).toContain('Ng Custom Setup');
+    expect(ToolbarComponentQuery.getToolbarTitle(nativeElem)?.innerText).toContain('Better Angular Setup');
   });
 });
