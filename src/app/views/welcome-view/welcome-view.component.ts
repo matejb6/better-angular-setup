@@ -9,7 +9,7 @@ import { DialogService } from '@shared/services/dialog/dialog.service';
 @Component({
   selector: 'app-welcome-view',
   templateUrl: './welcome-view.component.html',
-  styleUrls: ['./welcome-view.component.scss']
+  styleUrl: './welcome-view.component.scss'
 })
 export class WelcomeViewComponent {
   public readonly title: string = 'Hey developer';

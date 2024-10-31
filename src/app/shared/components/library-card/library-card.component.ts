@@ -5,7 +5,7 @@ import { Library } from '@core/interfaces/library';
 @Component({
   selector: 'app-library-card',
   templateUrl: './library-card.component.html',
-  styleUrls: ['./library-card.component.scss']
+  styleUrl: './library-card.component.scss'
 })
 export class LibraryCardComponent {
   @Input() public libraryCard: Library = {

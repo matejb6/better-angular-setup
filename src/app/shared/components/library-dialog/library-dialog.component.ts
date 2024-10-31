@@ -6,7 +6,7 @@ import { Library } from '@core/interfaces/library';
 @Component({
   selector: 'app-library-dialog',
   templateUrl: './library-dialog.component.html',
-  styleUrls: ['./library-dialog.component.scss']
+  styleUrl: './library-dialog.component.scss'
 })
 export class LibraryDialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public libraryCard: Library) {}
