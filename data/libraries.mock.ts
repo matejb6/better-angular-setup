@@ -1,6 +1,6 @@
 import { Library } from '@core/interfaces/library';
 
-export const librariesMock: Library[] = [
+export const LIBRARIES_MOCK: Library[] = [
   {
     logoPath: '',
     name: 'Library',
