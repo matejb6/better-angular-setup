@@ -12,7 +12,7 @@ export const routes: Routes = [
   {
     path: appRoutes.welcome,
     title: 'NCS • Welcome',
-    loadChildren: () => import('./views/welcome-view/welcome-view.module').then((m) => m.WelcomeViewModule)
+    loadChildren: () => import('./pages/welcome-page/welcome-page.module').then((m) => m.WelcomePageModule)
   },
   {
     path: '',
@@ -21,8 +21,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    title: 'NCS • Page Not Found',
-    loadChildren: () =>
-      import('./views/page-not-found-view/page-not-found-view.module').then((m) => m.PageNotFoundViewModule)
+    title: 'NCS • Not Found',
+    loadChildren: () => import('./pages/not-found-page/not-found-page.module').then((m) => m.NotFoundPageModule)
   }
 ];
