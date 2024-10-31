@@ -1,16 +1,6 @@
 import { Library } from '@core/interfaces/library';
 
-export const libraries: Library[] = [
-  {
-    logoPath: '../../../assets/logos/router.svg',
-    name: 'Angular Router',
-    description: 'Angular Router package',
-    link: 'https://angular.io/guide/routing-overview',
-    stepsToAdd: [
-      'If creating new app, accept Angular Router when prompted',
-      'If adding to existing app, install package with: npm install @angular/router'
-    ]
-  },
+export const LIBRARIES: Library[] = [
   {
     logoPath: '../../../assets/logos/material.svg',
     name: 'Angular Material',
