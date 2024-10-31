@@ -1,10 +1,10 @@
-# Ng Custom Setup
+# Better Angular Setup
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/matejb6/ng-custom-setup/ci.yml)
-![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/ng-custom-setup)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/matejb6/ng-custom-setup)
-![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/ng-custom-setup)
-![GitHub](https://img.shields.io/github/license/matejb6/ng-custom-setup)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/matejb6/better-angular-setup/ci.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/matejb6/better-angular-setup)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/matejb6/better-angular-setup)
+![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/better-angular-setup)
+![GitHub](https://img.shields.io/github/license/matejb6/better-angular-setup)
 
 ![App screenshot](./src/assets/img/app-screenshot.png 'App screenshot')
 
