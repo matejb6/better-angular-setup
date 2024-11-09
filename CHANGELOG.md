@@ -9,8 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
-## [1.6.0] - 2024-01-25
-### Added
+## [1.7.0] - 2024-11-09
+### Changed
+- Angular update from 16 to 17
+- Package dependencies
+- GitHub Actions workflows
+- Readme
+- App bootstrapping
+- App routing
+- App module to standalone app component
+- Views renamed into pages
+- Welcome page texts
+- Screenshot
+
+## [1.6.0] - 2024-09-28
 ### Changed
 - Angular update from 15 to 16
 - Package dependencies
