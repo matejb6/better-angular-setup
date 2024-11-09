@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { librariesMock } from '@data/libraries.mock';
+import { LIBRARIES_MOCK } from '@data/libraries.mock';
 import { LibraryDialogModule } from './library-dialog.module';
 import { LibraryDialogComponent } from './library-dialog.component';
 import { LibraryDialogComponentQuery } from './library-dialog.component.query.spec';
@@ -14,7 +14,7 @@ describe('LibraryDialogComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LibraryDialogModule],
-      providers: [{ provide: MAT_DIALOG_DATA, useValue: librariesMock[0] }]
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] }]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LibraryDialogComponent);
@@ -60,24 +60,24 @@ describe('LibraryDialogComponent', () => {
   });
 
   it('should have title', () => {
-    expect(LibraryDialogComponentQuery.getDialogTitle(nativeElem)?.innerText).toEqual(librariesMock[0].name);
+    expect(LibraryDialogComponentQuery.getDialogTitle(nativeElem)?.innerText).toEqual(LIBRARIES_MOCK[0].name);
   });
 
   it('should have description', () => {
     expect(LibraryDialogComponentQuery.getDialogContentDescription(nativeElem)?.innerText).toEqual(
-      librariesMock[0].description
+      LIBRARIES_MOCK[0].description
     );
   });
 
   it('should have correct number of steps', () => {
     expect(LibraryDialogComponentQuery.getDialogContentDescriptionListItems(nativeElem)?.length).toEqual(
-      librariesMock[0].stepsToAdd.length
+      LIBRARIES_MOCK[0].stepsToAdd.length
     );
   });
 
   it('should have first step', () => {
     expect(LibraryDialogComponentQuery.getDialogContentDescriptionListItems(nativeElem)?.item(0).innerText).toEqual(
-      librariesMock[0].stepsToAdd[0]
+      LIBRARIES_MOCK[0].stepsToAdd[0]
     );
   });
 
@@ -90,7 +90,7 @@ describe('LibraryDialogComponent', () => {
   });
 
   it('should have dialog actions link button link', () => {
-    expect(LibraryDialogComponentQuery.getDialogActionsLinkButton(nativeElem)?.href).toEqual(librariesMock[0].link);
+    expect(LibraryDialogComponentQuery.getDialogActionsLinkButton(nativeElem)?.href).toEqual(LIBRARIES_MOCK[0].link);
   });
 
   it('should have dialog actions OK button as primary', () => {

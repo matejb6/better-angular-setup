@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ToolbarModule } from './toolbar.module';
 import { ToolbarComponent } from './toolbar.component';
@@ -11,7 +12,7 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToolbarModule]
+      imports: [ToolbarModule, HttpClientModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ToolbarComponent);
@@ -37,6 +38,6 @@ describe('ToolbarComponent', () => {
   });
 
   it('should have toolbar title', () => {
-    expect(ToolbarComponentQuery.getToolbarTitle(nativeElem)?.innerText).toContain('Ng Custom Setup');
+    expect(ToolbarComponentQuery.getToolbarTitle(nativeElem)?.innerText).toContain('Better Angular Setup');
   });
 });

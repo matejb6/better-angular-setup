@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { AppComponentQuery } from './app.component.query.spec';
 
@@ -11,7 +11,7 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppModule]
+      imports: [HttpClientModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
