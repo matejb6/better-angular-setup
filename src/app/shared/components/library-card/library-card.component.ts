@@ -16,7 +16,7 @@ export class LibraryCardComponent {
     stepsToAdd: []
   };
   @Output() public cardClick: EventEmitter<Library> = new EventEmitter<Library>();
-  public readonly defaultImage: string = '../../../../assets/logos/image.svg';
+  public readonly defaultImage: string = '/logos/image.svg';
 
   /**
    * On card click, emits and event of current library card data

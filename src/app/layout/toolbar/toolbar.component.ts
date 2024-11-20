@@ -21,9 +21,6 @@ export class ToolbarComponent {
    * Adds Angular SVG icon to registry
    */
   private addAngularSvgIconToRegistry(): void {
-    this.iconRegistry.addSvgIcon(
-      'angular-logo',
-      this.sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/logos/angular.svg')
-    );
+    this.iconRegistry.addSvgIcon('angular-logo', this.sanitizer.bypassSecurityTrustResourceUrl('/logos/angular.svg'));
   }
 }
