@@ -12,14 +12,14 @@ import { Library } from '@core/interfaces/library';
   styleUrl: './library-card.component.scss'
 })
 export class LibraryCardComponent {
-  @Input() public libraryCard: Library = {
+  @Input() libraryCard: Library = {
     logoPath: '',
     name: '',
     description: '',
     link: '',
     stepsToAdd: []
   };
-  @Output() public cardClicked: EventEmitter<Library> = new EventEmitter<Library>();
+  @Output() cardClicked: EventEmitter<Library> = new EventEmitter<Library>();
   public readonly defaultImage: string = '/logos/image.svg';
 
   /**
