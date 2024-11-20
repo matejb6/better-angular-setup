@@ -6,7 +6,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/better-angular-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/better-angular-setup)
 
-![App screenshot](./src/assets/img/app-screenshot.png 'App screenshot')
+![App screenshot](./public/img/app-screenshot.png 'App screenshot')
 
 ## About
 Default Angular app extended with additional libraries and setup to help develop better apps.
@@ -42,7 +42,7 @@ This app was generated with [Angular CLI](https://github.com/angular/angular-cli
 
 ## Commit hooks
 Pre commit hooks are used to check code with `Prettier` and `ESLint`.
-Before each commit, staged files are checked with defined scripts and committing of unchecked code will be prevented.
+Before each commit, staged files are checked with defined scripts and committing of unchecked code is prevented.
 To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
 
 ## Git branching strategy
@@ -50,7 +50,7 @@ Two branches are present always and they should be merged from pull request:
 * `main` branch containing code ready for new versions
 * `dev` branch containing development advancements
 
-Other branches (dynamic branches) contain specific changes should have following prefixes, depending on type of changes they contain. Brief and descriptive description should be added after slash (e.g. feature/about-view):
+Other branches (dynamic branches) contain specific changes should have following prefixes, depending on type of changes they contain. Brief and descriptive description should be added after slash (e.g. feature/about-page):
 * `feature/` for new features
 * `issue/` for issues
 * `update/` for updates (files, dependencies, code, etc.)

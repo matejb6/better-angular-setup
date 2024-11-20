@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LIBRARIES_MOCK } from '@data/libraries.mock';
-import { LibraryCardModule } from './library-card.module';
 import { LibraryCardComponent } from './library-card.component';
 import { LibraryCardComponentQuery } from './library-card.component.query.spec';
 
@@ -11,9 +10,7 @@ describe('LibraryCardComponent', () => {
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LibraryCardModule]
-    }).compileComponents();
+    await TestBed.configureTestingModule({}).compileComponents();
 
     fixture = TestBed.createComponent(LibraryCardComponent);
     component = fixture.componentInstance;
@@ -43,9 +40,9 @@ describe('LibraryCardComponent', () => {
   });
 
   it('should emit an event on card click', () => {
-    spyOn(component.cardClick, 'emit');
+    spyOn(component.cardClicked, 'emit');
     LibraryCardComponentQuery.getCard(nativeElem)?.click();
 
-    expect(component.cardClick.emit).toHaveBeenCalledOnceWith(LIBRARIES_MOCK[0]);
+    expect(component.cardClicked.emit).toHaveBeenCalledOnceWith(LIBRARIES_MOCK[0]);
   });
 });

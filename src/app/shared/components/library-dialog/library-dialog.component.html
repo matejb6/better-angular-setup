@@ -3,7 +3,9 @@
   <p>{{ libraryCard.description }}</p>
   <p>Steps to add:</p>
   <ul>
-    <li *ngFor="let item of libraryCard.stepsToAdd">{{ item }}</li>
+    @for (step of libraryCard.stepsToAdd; track $index) {
+      <li>{{ step }}</li>
+    }
   </ul>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
