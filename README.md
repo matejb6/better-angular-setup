@@ -6,7 +6,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/better-angular-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/better-angular-setup)
 
-![App screenshot](./src/assets/img/app-screenshot.png 'App screenshot')
+![App screenshot](./public/img/app-screenshot.png 'App screenshot')
 
 ## About
 Default Angular app extended with additional libraries and setup to help develop better apps.
