@@ -10,7 +10,9 @@ describe('LibraryCardComponent', () => {
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({}).compileComponents();
+    await TestBed.configureTestingModule({
+      imports: [LibraryCardComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LibraryCardComponent);
     component = fixture.componentInstance;
