@@ -12,6 +12,7 @@ describe('LibraryDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [LibraryDialogComponent],
       providers: [{ provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] }]
     }).compileComponents();
 

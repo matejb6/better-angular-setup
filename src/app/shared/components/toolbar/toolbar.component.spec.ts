@@ -11,6 +11,7 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ToolbarComponent],
       providers: [provideHttpClient()]
     }).compileComponents();
 
