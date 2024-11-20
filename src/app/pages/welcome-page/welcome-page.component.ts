@@ -15,7 +15,7 @@ export class WelcomePageComponent implements OnInit {
   public readonly title: string = 'Hey developer 👋';
   public readonly paragraph: string = 'This is an Angular app with additional setup which includes:';
   public readonly message: string = 'This is just the beginning, it is your turn now 🙂...';
-  public $libraries: Observable<Library[]> = new Observable<Library[]>();
+  public libraries$: Observable<Library[]> = new Observable<Library[]>();
 
   constructor(
     private dataService: DataService,
@@ -23,7 +23,7 @@ export class WelcomePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.$libraries = this.dataService.getLibrariesObs();
+    this.libraries$ = this.dataService.getLibrariesObs();
   }
 
   /**

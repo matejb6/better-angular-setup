@@ -8,13 +8,13 @@ import { LIBRARIES } from '@data/libraries';
   providedIn: 'root'
 })
 export class DataService {
-  private librariesBehaviorSubject: BehaviorSubject<Library[]> = new BehaviorSubject<Library[]>(LIBRARIES);
+  private libraries$ = new BehaviorSubject<Library[]>(LIBRARIES);
 
   /**
    * Returns libraries behavior subject as observable
    * @returns Libraries observable
    */
   public getLibrariesObs(): Observable<Library[]> {
-    return this.librariesBehaviorSubject.asObservable();
+    return this.libraries$.asObservable();
   }
 }
