@@ -1,9 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatRippleModule } from '@angular/material/core';
 
 import { Library } from '@core/interfaces/library';
 
 @Component({
   selector: 'app-library-card',
+  standalone: true,
+  imports: [MatCardModule, MatRippleModule],
   templateUrl: './library-card.component.html',
   styleUrl: './library-card.component.scss'
 })

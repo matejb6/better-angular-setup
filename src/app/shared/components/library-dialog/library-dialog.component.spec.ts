@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { LIBRARIES_MOCK } from '@data/libraries.mock';
-import { LibraryDialogModule } from './library-dialog.module';
 import { LibraryDialogComponent } from './library-dialog.component';
 import { LibraryDialogComponentQuery } from './library-dialog.component.query.spec';
 
@@ -13,7 +12,6 @@ describe('LibraryDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LibraryDialogModule],
       providers: [{ provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] }]
     }).compileComponents();
 

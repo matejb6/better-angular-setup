@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-toolbar',
+  standalone: true,
+  imports: [MatIconModule, MatToolbarModule],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss'
 })
