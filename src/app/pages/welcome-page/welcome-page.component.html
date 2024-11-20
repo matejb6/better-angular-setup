@@ -3,7 +3,7 @@
 
 <div class="libraries">
   @for (library of libraries$ | async; track $index) {
-    <app-library-card [libraryCard]="library" (cardClick)="onCardClick($event)" />
+    <app-library-card [libraryCard]="library" (cardClicked)="cardClick($event)" />
   }
 </div>
 

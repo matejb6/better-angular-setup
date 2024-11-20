@@ -43,9 +43,9 @@ describe('LibraryCardComponent', () => {
   });
 
   it('should emit an event on card click', () => {
-    spyOn(component.cardClick, 'emit');
+    spyOn(component.cardClicked, 'emit');
     LibraryCardComponentQuery.getCard(nativeElem)?.click();
 
-    expect(component.cardClick.emit).toHaveBeenCalledOnceWith(LIBRARIES_MOCK[0]);
+    expect(component.cardClicked.emit).toHaveBeenCalledOnceWith(LIBRARIES_MOCK[0]);
   });
 });

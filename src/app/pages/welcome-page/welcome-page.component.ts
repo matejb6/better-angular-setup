@@ -30,7 +30,7 @@ export class WelcomePageComponent implements OnInit {
    * Opens dialog on card click
    * @param event Event data
    */
-  public onCardClick(event: Library): void {
+  public cardClick(event: Library): void {
     this.dialogService.openDialog(LibraryDialogComponent, event);
   }
 }
