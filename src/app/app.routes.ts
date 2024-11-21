@@ -12,7 +12,7 @@ export const routes: Routes = [
   {
     path: appRoutes.welcome,
     title: 'BAS • Welcome',
-    loadChildren: () => import('./pages/welcome-page/welcome-page.module').then((m) => m.WelcomePageModule)
+    loadComponent: () => import('./pages/welcome-page/welcome-page.component').then((c) => c.WelcomePageComponent)
   },
   {
     path: '',
@@ -22,6 +22,6 @@ export const routes: Routes = [
   {
     path: '**',
     title: 'BAS • Not Found',
-    loadChildren: () => import('./pages/not-found-page/not-found-page.module').then((m) => m.NotFoundPageModule)
+    loadComponent: () => import('./pages/not-found-page/not-found-page.component').then((c) => c.NotFoundPageComponent)
   }
 ];
