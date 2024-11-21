@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { WelcomePageModule } from './welcome-page.module';
 import { WelcomePageComponent } from './welcome-page.component';
 import { WelcomePageComponentQuery } from './welcome-page.component.query.spec';
 
@@ -12,7 +11,7 @@ describe('WelcomePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, WelcomePageModule]
+      imports: [BrowserAnimationsModule, WelcomePageComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(WelcomePageComponent);
