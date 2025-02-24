@@ -2,7 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { WelcomePageComponent } from './welcome-page.component';
-import { WelcomePageComponentQuery } from './welcome-page.component.query.spec';
+import {
+  getFirstLibraryCard,
+  getLibraryCards,
+  getLibraryDialog,
+  getLibraryDialogOkButton,
+  getTitle
+} from './welcome-page.component.query.spec';
 
 describe('WelcomePageComponent', () => {
   let fixture: ComponentFixture<WelcomePageComponent>;
@@ -25,29 +31,29 @@ describe('WelcomePageComponent', () => {
   });
 
   it('should render title', () => {
-    expect(WelcomePageComponentQuery.getTitle(nativeElem)).toBeTruthy();
+    expect(getTitle(nativeElem)).toBeTruthy();
   });
 
   it('should render multiple library cards', () => {
-    expect(WelcomePageComponentQuery.getLibraryCards(nativeElem).length).toBeGreaterThan(0);
+    expect(getLibraryCards(nativeElem).length).toBeGreaterThan(0);
   });
 
   it('should have title', () => {
-    expect(WelcomePageComponentQuery.getTitle(nativeElem)?.innerText).toContain('Hey developer');
+    expect(getTitle(nativeElem)?.innerText).toContain('Hey developer');
   });
 
   it('should open dialog on card click', () => {
-    WelcomePageComponentQuery.getFirstLibraryCard(nativeElem)?.click();
+    getFirstLibraryCard(nativeElem)?.click();
 
-    expect(WelcomePageComponentQuery.getLibraryDialog()).toBeTruthy();
+    expect(getLibraryDialog()).toBeTruthy();
   });
 
   it('should close dialog on OK button click', (done) => {
-    WelcomePageComponentQuery.getFirstLibraryCard(nativeElem)?.click();
-    WelcomePageComponentQuery.getLibraryDialogOkButton()?.click();
+    getFirstLibraryCard(nativeElem)?.click();
+    getLibraryDialogOkButton()?.click();
 
     setTimeout(() => {
-      expect(WelcomePageComponentQuery.getLibraryDialog()).toBeFalsy();
+      expect(getLibraryDialog()).toBeFalsy();
       done();
     }, 500);
   });

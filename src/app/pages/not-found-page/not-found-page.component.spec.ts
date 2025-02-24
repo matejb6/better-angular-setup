@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotFoundPageComponent } from './not-found-page.component';
-import { NotFoundPageComponentQuery } from './not-found-page.component.query.spec';
+import { getMessage } from './not-found-page.component.query.spec';
 
 describe('NotFoundPageComponent', () => {
   let fixture: ComponentFixture<NotFoundPageComponent>;
@@ -24,12 +24,10 @@ describe('NotFoundPageComponent', () => {
   });
 
   it('should render message', () => {
-    expect(NotFoundPageComponentQuery.getMessage(nativeElem)).toBeTruthy();
+    expect(getMessage(nativeElem)).toBeTruthy();
   });
 
   it('should have message', () => {
-    expect(NotFoundPageComponentQuery.getMessage(nativeElem)?.innerText).toContain(
-      'URL you try to access is not available'
-    );
+    expect(getMessage(nativeElem)?.innerText).toContain('URL you try to access is not available');
   });
 });
