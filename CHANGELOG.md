@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.8.0] - 2025-02-24
+### Added
+- Tests for Not Found Page
+- Pre commit branch name check
+### Changed
+- Angular update from 17 to 18
+- Package dependencies
+- ESLint config
+- Components and pages migrated to standalone components
+- Code updates according to latest style guides
+- Images moved from assets to public folder
+- Tests query from classes to functions
+
 ## [1.7.0] - 2024-11-09
 ### Changed
 - Angular update from 16 to 17
@@ -21,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Views renamed into pages
 - Welcome page texts
 - Screenshot
+- App renamed to "better-angular-setup"
 
 ## [1.6.0] - 2024-09-28
 ### Changed
