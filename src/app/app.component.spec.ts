@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { AppComponentQuery } from './app.component.query.spec';
+import { getToolbar } from './app.component.query.spec';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -11,7 +11,8 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule]
+      imports: [AppComponent],
+      providers: [provideHttpClient()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -25,6 +26,6 @@ describe('AppComponent', () => {
   });
 
   it('should render toolbar', () => {
-    expect(AppComponentQuery.getToolbar(nativeElem)).toBeTruthy();
+    expect(getToolbar(nativeElem)).toBeTruthy();
   });
 });

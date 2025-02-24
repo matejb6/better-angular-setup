@@ -1,27 +1,31 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatRippleModule } from '@angular/material/core';
 
 import { Library } from '@core/interfaces/library';
 
 @Component({
   selector: 'app-library-card',
+  standalone: true,
+  imports: [MatCardModule, MatRippleModule],
   templateUrl: './library-card.component.html',
   styleUrl: './library-card.component.scss'
 })
 export class LibraryCardComponent {
-  @Input() public libraryCard: Library = {
+  @Input() libraryCard: Library = {
     logoPath: '',
     name: '',
     description: '',
     link: '',
     stepsToAdd: []
   };
-  @Output() public cardClick: EventEmitter<Library> = new EventEmitter<Library>();
-  public readonly defaultImage: string = '../../../../assets/logos/image.svg';
+  @Output() cardClicked: EventEmitter<Library> = new EventEmitter<Library>();
+  public readonly defaultImage: string = '/logos/image.svg';
 
   /**
    * On card click, emits and event of current library card data
    */
-  public onCardClick(): void {
-    this.cardClick.emit(this.libraryCard);
+  public cardClick(): void {
+    this.cardClicked.emit(this.libraryCard);
   }
 }

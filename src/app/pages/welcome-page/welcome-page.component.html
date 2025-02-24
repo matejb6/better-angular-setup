@@ -2,11 +2,9 @@
 <h3>{{ paragraph }}</h3>
 
 <div class="libraries">
-  <app-library-card
-    *ngFor="let library of $libraries | async"
-    [libraryCard]="library"
-    (cardClick)="onCardClick($event)"
-  ></app-library-card>
+  @for (library of libraries$ | async; track $index) {
+    <app-library-card [libraryCard]="library" (cardClicked)="cardClick($event)" />
+  }
 </div>
 
 <h3>{{ message }}</h3>

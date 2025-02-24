@@ -6,7 +6,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/matejb6/better-angular-setup)
 ![GitHub](https://img.shields.io/github/license/matejb6/better-angular-setup)
 
-![App screenshot](./src/assets/img/app-screenshot.png 'App screenshot')
+![App screenshot](./public/img/app-screenshot.png 'App screenshot')
 
 ## About
 Default Angular app extended with additional libraries and setup to help develop better apps.
@@ -41,19 +41,20 @@ This app was generated with [Angular CLI](https://github.com/angular/angular-cli
 * `Prettier` added with: `npm install prettier --save-dev`
 
 ## Commit hooks
-Pre commit hooks are used to check code with `Prettier` and `ESLint`.
-Before each commit, staged files are checked with defined scripts and committing of unchecked code will be prevented.
-To commit code successfully, check `Prettier` and `Lint` paragraphs of this file.
+Pre commit hooks are used to check branch name and to check code with `Prettier` and `ESLint`.
+Before each commit, staged files are checked with defined scripts and committing of incorrect code is prevented.
+Allowed branch names are referenced in `Git branching strategy` section of this document.
+To commit code successfully, refer to `Prettier` and `Lint` sections of this file.
 
 ## Git branching strategy
 Two branches are present always and they should be merged from pull request:
 * `main` branch containing code ready for new versions
 * `dev` branch containing development advancements
 
-Other branches (dynamic branches) contain specific changes should have following prefixes, depending on type of changes they contain. Brief and descriptive description should be added after slash (e.g. feature/about-view):
+Other branches (dynamic branches) contain specific changes should have following prefixes, depending on type of changes they contain. Brief and descriptive description should be added after slash (e.g. feature/about-page):
 * `feature/` for new features
-* `issue/` for issues
 * `update/` for updates (files, dependencies, code, etc.)
+* `issue/` for issues
 * `other/` for other changes
 
 ## GitHub Actions
@@ -64,7 +65,7 @@ Defined workflows:
 For more details see `.github/workflows/`.
 
 ## Requirements
-* node.js ^18.13.0 || ^20.9.0
+* node.js ^18.19.1 || ^20.11.1 || ^22.0.0
 
 ## Setup
 * In root run `npm install` to install dependencies
