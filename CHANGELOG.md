@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.8.1] - 2025-03-03
+### Changed
+- Prettier scripts renamed to format
+### Fixed
+- Lint html files
+
 ## [1.8.0] - 2025-02-24
 ### Added
 - Tests for Not Found Page
