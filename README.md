@@ -26,8 +26,8 @@ This app was generated with [Angular CLI](https://github.com/angular/angular-cli
 * `start`: Starts Angular development server and serves the app
 * `build`: Builds Angular app
 * `watch`: Builds Angular app when files change with development configuration
-* `prettier:check`: Checks code formatting with Prettier
-* `prettier:write`: Formats code with Prettier
+* `format`: Formats code with Prettier
+* `format:check`: Checks code formatting with Prettier
 * `lint`: Lints code with ESLint
 * `test`: Tests Angular app with Karma
 * `test:ci`: Tests Angular app with Karma in headless mode
@@ -80,8 +80,8 @@ For more details see `.github/workflows/`.
 * In root run `npm run build` to build the app
 
 ## Prettier
-* In root run `npm run prettier:check` to check if files are formatted with [Prettier](https://prettier.io)
-* In root run `npm run prettier:write` to format files
+* In root run `npm run format` to format files
+* In root run `npm run format:check` to check if files are formatted with [Prettier](https://prettier.io)
 
 ## Lint
 * In root run `npm run lint` to lint the app with [ESLint](https://eslint.org)
