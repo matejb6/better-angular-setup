@@ -7,7 +7,7 @@ if [[ ! $branch_name =~ $branch_name_regex ]]; then
     exit 1
 fi
 
-npm run prettier:check
+npm run format:check
 npm run lint
 
 exit 0
