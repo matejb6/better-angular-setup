@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LIBRARIES_MOCK } from '@data/libraries.mock';
+import { LIBRARIES_MOCK } from '@data/libraries';
 import { LibraryCardComponent } from './library-card.component';
 import { getCard, getCardImage, getCardTitle } from './library-card.component.query.spec';
 

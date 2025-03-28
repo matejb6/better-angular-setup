@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LIBRARIES_MOCK } from '@data/libraries.mock';
+import { LIBRARIES_MOCK } from '@data/libraries';
 import { DialogModule } from './dialog.module';
 import { DialogService } from './dialog.service';
-import { LibraryDialogComponent } from '@app/shared/components/library-dialog/library-dialog.component';
+import { LibraryDialogComponent } from '@app/shared/components';
 
 describe('DialogService', () => {
   let service: DialogService;

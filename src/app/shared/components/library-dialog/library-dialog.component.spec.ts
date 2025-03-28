@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { LIBRARIES_MOCK } from '@data/libraries.mock';
+import { LIBRARIES_MOCK } from '@data/libraries';
 import { LibraryDialogComponent } from './library-dialog.component';
 import {
   getDialogActions,

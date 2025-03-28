@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { Library } from '@app/core/interfaces/library';
+import { Library } from '@app/core/interfaces';
 import { LIBRARIES } from '@data/libraries';
 
 @Injectable({

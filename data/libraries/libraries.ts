@@ -1,4 +1,4 @@
-import { Library } from '@app/core/interfaces/library';
+import { Library } from '@app/core/interfaces';
 
 export const LIBRARIES: Library[] = [
   {

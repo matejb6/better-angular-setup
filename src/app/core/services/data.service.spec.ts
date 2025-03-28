@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 
-import { CoreModule } from '@app/core/core.module';
+import { CoreModule } from '../core.module';
 import { DataService } from './data.service';
 
 describe('DataService', () => {
