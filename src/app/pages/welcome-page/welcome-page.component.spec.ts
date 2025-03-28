@@ -42,13 +42,13 @@ describe('WelcomePageComponent', () => {
     expect(getTitle(nativeElem)?.innerText).toContain('Hey developer');
   });
 
-  it('should open dialog on card click', () => {
+  it('should open dialog when card clicked', () => {
     getFirstLibraryCard(nativeElem)?.click();
 
     expect(getLibraryDialog()).toBeTruthy();
   });
 
-  it('should close dialog on OK button click', (done) => {
+  it('should close dialog when OK button clicked', (done) => {
     getFirstLibraryCard(nativeElem)?.click();
     getLibraryDialogOkButton()?.click();
 

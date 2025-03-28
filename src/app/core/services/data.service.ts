@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { Library } from '@core/interfaces/library';
+import { Library } from '@app/core/interfaces';
 import { LIBRARIES } from '@data/libraries';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class DataService {
    * Returns libraries behavior subject as observable
    * @returns Libraries observable
    */
-  public getLibrariesObs(): Observable<Library[]> {
+  public getLibrariesAsObs(): Observable<Library[]> {
     return this.libraries$.asObservable();
   }
 }

@@ -79,9 +79,9 @@ For more details see `.github/workflows/`.
 ## Build
 * In root run `npm run build` to build the app
 
-## Prettier
-* In root run `npm run format` to format files
-* In root run `npm run format:check` to check if files are formatted with [Prettier](https://prettier.io)
+## Format
+* In root run `npm run format` to format files with [Prettier](https://prettier.io)
+* In root run `npm run format:check` to check if files are formatted
 
 ## Lint
 * In root run `npm run lint` to lint the app with [ESLint](https://eslint.org)

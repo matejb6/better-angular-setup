@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.8.2] - 2025-03-28
+### Added
+- index.ts files to simplify imports
+### Changed
+- GitHub Actions Workflow job name
+- tsconfig paths
+- Code simplification and refactoring
+
 ## [1.8.1] - 2025-03-03
 ### Changed
 - Prettier scripts renamed to format

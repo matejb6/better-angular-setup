@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 
-import { CoreModule } from '@core/core.module';
+import { CoreModule } from '../core.module';
 import { DataService } from './data.service';
 
 describe('DataService', () => {
@@ -19,7 +19,7 @@ describe('DataService', () => {
   });
 
   it('should have libraries observable data', async () => {
-    const libraries = await firstValueFrom(service.getLibrariesObs());
+    const libraries = await firstValueFrom(service.getLibrariesAsObs());
     expect(libraries.length).toBeGreaterThan(0);
   });
 });

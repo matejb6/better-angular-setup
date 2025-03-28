@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
-import { DataService } from '@core/data/data.service';
-import { Library } from '@core/interfaces/library';
-import { SharedModule } from '@shared/shared.module';
-import { LibraryCardComponent } from '@shared/components/library-card/library-card.component';
-import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
-import { DialogService } from '@shared/services/dialog/dialog.service';
+import { DataService } from '@app/core/services';
+import { Library } from '@app/core/interfaces';
+import { SharedModule } from '@app/shared/shared.module';
+import { LibraryCardComponent } from '@app/shared/components';
+import { LibraryDialogComponent } from '@app/shared/components';
+import { DialogService } from '@app/shared/services';
 
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [SharedModule, LibraryCardComponent],
+  imports: [CommonModule, SharedModule, LibraryCardComponent],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.scss'
 })
@@ -27,14 +28,14 @@ export class WelcomePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.libraries$ = this.dataService.getLibrariesObs();
+    this.libraries$ = this.dataService.getLibrariesAsObs();
   }
 
   /**
-   * Opens dialog on card click
+   * Opens dialog when card clicked
    * @param event Event data
    */
-  public cardClick(event: Library): void {
+  public clickCard(event: Library): void {
     this.dialogService.openDialog(LibraryDialogComponent, event);
   }
 }
