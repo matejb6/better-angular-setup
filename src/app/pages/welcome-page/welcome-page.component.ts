@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
-import { DataService } from '@app/core/data/data.service';
+import { DataService } from '@app/core/services/data.service';
 import { Library } from '@app/core/interfaces/library';
 import { SharedModule } from '@app/shared/shared.module';
 import { LibraryCardComponent } from '@app/shared/components/library-card/library-card.component';
