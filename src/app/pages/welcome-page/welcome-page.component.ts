@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { DataService } from '@core/data/data.service';
-import { Library } from '@core/interfaces/library';
-import { SharedModule } from '@shared/shared.module';
-import { LibraryCardComponent } from '@shared/components/library-card/library-card.component';
-import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
-import { DialogService } from '@shared/services/dialog/dialog.service';
+import { DataService } from '@app/core/data/data.service';
+import { Library } from '@app/core/interfaces/library';
+import { SharedModule } from '@app/shared/shared.module';
+import { LibraryCardComponent } from '@app/shared/components/library-card/library-card.component';
+import { LibraryDialogComponent } from '@app/shared/components/library-dialog/library-dialog.component';
+import { DialogService } from '@app/shared/services/dialog/dialog.service';
 
 @Component({
   selector: 'app-welcome-page',

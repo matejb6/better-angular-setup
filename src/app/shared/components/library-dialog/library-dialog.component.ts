@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 
-import { Library } from '@core/interfaces/library';
+import { Library } from '@app/core/interfaces/library';
 
 @Component({
   selector: 'app-library-dialog',

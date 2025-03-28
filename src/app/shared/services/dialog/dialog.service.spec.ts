@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LIBRARIES_MOCK } from '@data/libraries.mock';
 import { DialogModule } from './dialog.module';
 import { DialogService } from './dialog.service';
-import { LibraryDialogComponent } from '@shared/components/library-dialog/library-dialog.component';
+import { LibraryDialogComponent } from '@app/shared/components/library-dialog/library-dialog.component';
 
 describe('DialogService', () => {
   let service: DialogService;

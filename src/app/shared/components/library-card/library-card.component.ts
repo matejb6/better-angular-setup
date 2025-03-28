@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 
-import { Library } from '@core/interfaces/library';
+import { Library } from '@app/core/interfaces/library';
 
 @Component({
   selector: 'app-library-card',
