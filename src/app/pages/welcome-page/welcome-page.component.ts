@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
 import { DataService } from '@app/core/data/data.service';
@@ -11,7 +12,7 @@ import { DialogService } from '@app/shared/services/dialog/dialog.service';
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [SharedModule, LibraryCardComponent],
+  imports: [CommonModule, SharedModule, LibraryCardComponent],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.scss'
 })
