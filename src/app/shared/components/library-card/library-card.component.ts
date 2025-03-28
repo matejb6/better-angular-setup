@@ -19,13 +19,13 @@ export class LibraryCardComponent {
     link: '',
     stepsToAdd: []
   };
-  @Output() cardClicked: EventEmitter<Library> = new EventEmitter<Library>();
+  @Output() cardClick: EventEmitter<Library> = new EventEmitter<Library>();
   public readonly defaultImage: string = '/logos/image.svg';
 
   /**
-   * On card click, emits and event of current library card data
+   * When card clicked, emits and event of current library card data
    */
-  public cardClick(): void {
-    this.cardClicked.emit(this.libraryCard);
+  public clickCard(): void {
+    this.cardClick.emit(this.libraryCard);
   }
 }

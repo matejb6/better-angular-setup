@@ -2,7 +2,7 @@
 <h3>{{ paragraph }}</h3>
 <div class="libraries">
   @for (library of libraries$ | async; track $index) {
-    <app-library-card [libraryCard]="library" (cardClicked)="cardClick($event)" />
+    <app-library-card [libraryCard]="library" (cardClick)="clickCard($event)" />
   }
 </div>
 <h3>{{ message }}</h3>

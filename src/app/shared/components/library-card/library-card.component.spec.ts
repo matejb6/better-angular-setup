@@ -41,10 +41,10 @@ describe('LibraryCardComponent', () => {
     expect(getCardTitle(nativeElem)?.innerText).toEqual(LIBRARIES_MOCK[0].name);
   });
 
-  it('should emit an event on card click', () => {
-    spyOn(component.cardClicked, 'emit');
+  it('should emit an event when card clicked', () => {
+    spyOn(component.cardClick, 'emit');
     getCard(nativeElem)?.click();
 
-    expect(component.cardClicked.emit).toHaveBeenCalledOnceWith(LIBRARIES_MOCK[0]);
+    expect(component.cardClick.emit).toHaveBeenCalledOnceWith(LIBRARIES_MOCK[0]);
   });
 });
