@@ -19,7 +19,7 @@ describe('DataService', () => {
   });
 
   it('should have libraries observable data', async () => {
-    const libraries = await firstValueFrom(service.getLibrariesObs());
+    const libraries = await firstValueFrom(service.getLibrariesAsObs());
     expect(libraries.length).toBeGreaterThan(0);
   });
 });

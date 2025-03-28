@@ -28,7 +28,7 @@ export class WelcomePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.libraries$ = this.dataService.getLibrariesObs();
+    this.libraries$ = this.dataService.getLibrariesAsObs();
   }
 
   /**
