@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -11,12 +11,12 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {
+  private iconRegistry = inject(MatIconRegistry);
+  private sanitizer = inject(DomSanitizer);
+
   public toolbarTitle = 'Better Angular Setup';
 
-  constructor(
-    private iconRegistry: MatIconRegistry,
-    private sanitizer: DomSanitizer
-  ) {
+  constructor() {
     this.addAngularSvgIconToRegistry();
   }
 
