@@ -16,7 +16,7 @@ describe('LibraryCardComponent', () => {
 
     fixture = TestBed.createComponent(LibraryCardComponent);
     component = fixture.componentInstance;
-    component.libraryCard = LIBRARIES_MOCK[0];
+    fixture.componentRef.setInput('libraryCard', LIBRARIES_MOCK[0]);
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;
   });
