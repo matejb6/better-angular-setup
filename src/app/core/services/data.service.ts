@@ -14,7 +14,7 @@ export class DataService {
    * Returns libraries behavior subject as observable
    * @returns Libraries observable
    */
-  public getLibrariesAsObs(): Observable<Library[]> {
+  getLibrariesAsObs(): Observable<Library[]> {
     return this.libraries$.asObservable();
   }
 }

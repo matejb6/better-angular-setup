@@ -12,20 +12,20 @@ import { Library } from '@app/core/interfaces';
   styleUrl: './library-card.component.scss'
 })
 export class LibraryCardComponent {
-  public readonly libraryCard = input<Library>({
+  readonly libraryCard = input<Library>({
     logoPath: '',
     name: '',
     description: '',
     link: '',
     stepsToAdd: []
   });
-  public readonly cardClick = output<Library>();
-  public readonly defaultImage: string = '/logos/image.svg';
+  readonly cardClick = output<Library>();
+  readonly defaultImage: string = '/logos/image.svg';
 
   /**
    * When card clicked, emits and event of current library card data
    */
-  public clickCard(): void {
+  clickCard(): void {
     this.cardClick.emit(this.libraryCard());
   }
 }

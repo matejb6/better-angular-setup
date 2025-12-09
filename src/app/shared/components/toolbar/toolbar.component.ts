@@ -14,7 +14,7 @@ export class ToolbarComponent {
   private iconRegistry = inject(MatIconRegistry);
   private sanitizer = inject(DomSanitizer);
 
-  public toolbarTitle = 'Better Angular Setup';
+  toolbarTitle = 'Better Angular Setup';
 
   constructor() {
     this.addAngularSvgIconToRegistry();
