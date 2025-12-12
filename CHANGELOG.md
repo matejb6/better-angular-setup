@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.9.0] - 2025-12-12
+### Added
+### Changed
+- Angular update to v19
+- Migrate to inject()
+- Migrate inputs and outputs to signals
+- Toolbar style
+- Removed "public" access modifier from class fields
+### Fixed
+
 ## [1.8.2] - 2025-03-28
 ### Added
 - index.ts files to simplify imports

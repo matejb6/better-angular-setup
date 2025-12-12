@@ -37,8 +37,8 @@ This app was generated with [Angular CLI](https://github.com/angular/angular-cli
 ### Additional packages
 * `Angular Material` added with: `ng add @angular/material`
 * `ESLint` added with: `ng add @angular-eslint/schematics`
-* `Husky` added with: `npx husky init`
 * `Prettier` added with: `npm install prettier --save-dev`
+* `Husky` added with: `npx husky init`
 
 ## Commit hooks
 Pre commit hooks are used to check branch name and to check code with `Prettier` and `ESLint`.
