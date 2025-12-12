@@ -20,10 +20,10 @@ export class WelcomePageComponent implements OnInit {
   private dataService = inject(DataService);
   private dialogService = inject(DialogService);
 
-  public readonly title: string = 'Hey developer 👋';
-  public readonly paragraph: string = 'This is an Angular app with additional setup which includes:';
-  public readonly message: string = 'This is just the beginning, it is your turn now 🙂...';
-  public libraries$: Observable<Library[]> = new Observable<Library[]>();
+  readonly title: string = 'Hey developer 👋';
+  readonly paragraph: string = 'This is an Angular app with additional setup which includes:';
+  readonly message: string = 'This is just the beginning, it is your turn now 🙂...';
+  libraries$: Observable<Library[]> = new Observable<Library[]>();
 
   ngOnInit() {
     this.libraries$ = this.dataService.getLibrariesAsObs();
@@ -33,7 +33,7 @@ export class WelcomePageComponent implements OnInit {
    * Opens dialog when card clicked
    * @param event Event data
    */
-  public clickCard(event: Library): void {
+  clickCard(event: Library): void {
     this.dialogService.openDialog(LibraryDialogComponent, event);
   }
 }

@@ -14,5 +14,5 @@ import { Library } from '@app/core/interfaces';
   styleUrl: './library-dialog.component.scss'
 })
 export class LibraryDialogComponent {
-  public libraryCard = inject(MAT_DIALOG_DATA as InjectionToken<Library>);
+  libraryCard = inject(MAT_DIALOG_DATA as InjectionToken<Library>);
 }
