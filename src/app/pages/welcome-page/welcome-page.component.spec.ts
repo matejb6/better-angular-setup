@@ -1,5 +1,5 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { WelcomePageComponent } from './welcome-page.component';
 import {
@@ -7,7 +7,7 @@ import {
   getLibraryCards,
   getLibraryDialog,
   getLibraryDialogOkButton,
-  getTitle
+  getTitle,
 } from './welcome-page.component.query.spec';
 
 describe('WelcomePageComponent', () => {
@@ -17,7 +17,8 @@ describe('WelcomePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, WelcomePageComponent]
+      imports: [WelcomePageComponent],
+      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(WelcomePageComponent);
@@ -50,8 +51,11 @@ describe('WelcomePageComponent', () => {
 
   it('should close dialog when OK button clicked', (done) => {
     getFirstLibraryCard(nativeElem)?.click();
+    fixture.detectChanges();
+
     getLibraryDialogOkButton()?.click();
 
+    // Wait for dialog animation to finish
     setTimeout(() => {
       expect(getLibraryDialog()).toBeFalsy();
       done();

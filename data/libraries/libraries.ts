@@ -6,14 +6,14 @@ export const LIBRARIES: Library[] = [
     name: 'Angular Material',
     description: 'Material Design components for Angular',
     link: 'https://material.angular.io',
-    stepsToAdd: ['Open terminal in root and enter command: ng add @angular/material']
+    stepsToAdd: ['Open terminal in root and enter command: ng add @angular/material'],
   },
   {
     logoPath: '/logos/eslint.svg',
     name: 'ESLint',
     description: 'Find and fix problems in your JavaScript code',
     link: 'https://eslint.org',
-    stepsToAdd: ['Open terminal in root and enter command: ng add @angular-eslint/schematics']
+    stepsToAdd: ['Open terminal in root and enter command: ng add @angular-eslint/schematics'],
   },
   {
     logoPath: '/logos/github.png',
@@ -23,8 +23,8 @@ export const LIBRARIES: Library[] = [
     stepsToAdd: [
       'Check files in ./.github/workflows',
       'File ci.yml is used for continuous integration',
-      'File version.yml is used for creating a new version'
-    ]
+      'File version.yml is used for creating a new version',
+    ],
   },
   {
     logoPath: '/logos/prettier.png',
@@ -37,8 +37,8 @@ export const LIBRARIES: Library[] = [
       'In root, create file .prettierignore and add all files and folders which should be ignored',
       'In root, create file .prettierrc.json and add rules you want to override',
       'Check code format with command: npx prettier --check',
-      'Format code with command: npx prettier --write'
-    ]
+      'Format code with command: npx prettier --write',
+    ],
   },
   {
     logoPath: '',
@@ -48,8 +48,8 @@ export const LIBRARIES: Library[] = [
     stepsToAdd: [
       'Install Husky with command: npm install husky --save-dev',
       'Init husky with command: npx husky install',
-      'In root create file .husky/pre-commit containing commands which should be run'
-    ]
+      'In root create file .husky/pre-commit containing commands which should be run',
+    ],
   },
   {
     logoPath: '/logos/karma.svg',
@@ -59,7 +59,7 @@ export const LIBRARIES: Library[] = [
     stepsToAdd: [
       'Check karma.conf.js for Karma configuration',
       'Check package.json test scripts',
-      'Install Karma spec reporter with command: npm install karma-spec-reporter --save-dev'
-    ]
-  }
+      'Install Karma spec reporter with command: npm install karma-spec-reporter --save-dev',
+    ],
+  },
 ];

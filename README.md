@@ -65,7 +65,7 @@ Defined workflows:
 For more details see `.github/workflows/`.
 
 ## Requirements
-* node.js ^18.19.1 || ^20.11.1 || ^22.0.0
+* node.js ^20.19.0 || ^22.12.0 || ^24.0.0
 
 ## Setup
 * In root run `npm install` to install dependencies
@@ -87,7 +87,6 @@ For more details see `.github/workflows/`.
 * In root run `npm run lint` to lint the app with [ESLint](https://eslint.org)
 
 ## Test
-* Add `Karma config` by running the following command: `ng generate config karma`
 * In root run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io)
 * In root run `npm run test:ci` to execute the unit tests in headless mode
 * In root run `npm run test:coverage` to execute the unit tests in headless mode with coverage

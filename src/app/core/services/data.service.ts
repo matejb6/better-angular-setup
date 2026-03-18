@@ -5,7 +5,7 @@ import { Library } from '@app/core/interfaces';
 import { LIBRARIES } from '@data/libraries';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
   private libraries$ = new BehaviorSubject<Library[]>(LIBRARIES);

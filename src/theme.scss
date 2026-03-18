@@ -1,0 +1,11 @@
+// App theme definition, app wide look and feel
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: lightblue,
+    )
+  );
+}

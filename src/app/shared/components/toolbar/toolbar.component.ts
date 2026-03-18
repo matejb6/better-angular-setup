@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   standalone: true,
   imports: [MatIconModule, MatToolbarModule],
   templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.scss'
+  styleUrl: './toolbar.component.scss',
 })
 export class ToolbarComponent {
   private iconRegistry = inject(MatIconRegistry);
@@ -24,6 +24,9 @@ export class ToolbarComponent {
    * Adds Angular SVG icon to registry
    */
   private addAngularSvgIconToRegistry(): void {
-    this.iconRegistry.addSvgIcon('angular-logo', this.sanitizer.bypassSecurityTrustResourceUrl('/logos/angular.svg'));
+    this.iconRegistry.addSvgIcon(
+      'angular-logo',
+      this.sanitizer.bypassSecurityTrustResourceUrl('/logos/angular.svg'),
+    );
   }
 }

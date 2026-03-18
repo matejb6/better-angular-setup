@@ -14,7 +14,7 @@ import { DialogService } from '@app/shared/services';
   standalone: true,
   imports: [CommonModule, SharedModule, LibraryCardComponent],
   templateUrl: './welcome-page.component.html',
-  styleUrl: './welcome-page.component.scss'
+  styleUrl: './welcome-page.component.scss',
 })
 export class WelcomePageComponent implements OnInit {
   private dataService = inject(DataService);
