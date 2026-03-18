@@ -9,7 +9,7 @@ import { Library } from '@app/core/interfaces';
   standalone: true,
   imports: [MatCardModule, MatRippleModule],
   templateUrl: './library-card.component.html',
-  styleUrl: './library-card.component.scss'
+  styleUrl: './library-card.component.scss',
 })
 export class LibraryCardComponent {
   readonly libraryCard = input<Library>({
@@ -17,7 +17,7 @@ export class LibraryCardComponent {
     name: '',
     description: '',
     link: '',
-    stepsToAdd: []
+    stepsToAdd: [],
   });
   readonly cardClick = output<Library>();
   readonly defaultImage: string = '/logos/image.svg';

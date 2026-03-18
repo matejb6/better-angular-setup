@@ -13,7 +13,7 @@ describe('LibraryCardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LibraryCardComponent],
-      providers: [provideZonelessChangeDetection()]
+      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LibraryCardComponent);

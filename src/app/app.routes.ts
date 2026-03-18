@@ -5,23 +5,27 @@ export interface AppRoutes {
 }
 
 export const appRoutes: AppRoutes = {
-  welcome: 'welcome'
+  welcome: 'welcome',
 };
 
 export const routes: Routes = [
   {
     path: appRoutes.welcome,
     title: 'BAS • Welcome',
-    loadComponent: () => import('./pages/welcome-page/welcome-page.component').then((c) => c.WelcomePageComponent)
+    loadComponent: () =>
+      import('./pages/welcome-page/welcome-page.component').then((c) => c.WelcomePageComponent),
   },
   {
     path: '',
     redirectTo: appRoutes.welcome,
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '**',
     title: 'BAS • Not Found',
-    loadComponent: () => import('./pages/not-found-page/not-found-page.component').then((c) => c.NotFoundPageComponent)
-  }
+    loadComponent: () =>
+      import('./pages/not-found-page/not-found-page.component').then(
+        (c) => c.NotFoundPageComponent,
+      ),
+  },
 ];

@@ -11,7 +11,7 @@ import { Library } from '@app/core/interfaces';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatDialogModule, MatIconModule],
   templateUrl: './library-dialog.component.html',
-  styleUrl: './library-dialog.component.scss'
+  styleUrl: './library-dialog.component.scss',
 })
 export class LibraryDialogComponent {
   libraryCard = inject(MAT_DIALOG_DATA as InjectionToken<Library>);

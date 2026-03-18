@@ -6,6 +6,6 @@ import { DialogModule } from './dialog/dialog.module';
   imports: [DialogModule],
   exports: [DialogModule],
   declarations: [],
-  providers: []
+  providers: [],
 })
 export class ServicesModule {}

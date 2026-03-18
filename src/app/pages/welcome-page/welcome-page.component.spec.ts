@@ -7,7 +7,7 @@ import {
   getLibraryCards,
   getLibraryDialog,
   getLibraryDialogOkButton,
-  getTitle
+  getTitle,
 } from './welcome-page.component.query.spec';
 
 describe('WelcomePageComponent', () => {
@@ -18,7 +18,7 @@ describe('WelcomePageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [WelcomePageComponent],
-      providers: [provideZonelessChangeDetection()]
+      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(WelcomePageComponent);

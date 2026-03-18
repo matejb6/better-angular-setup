@@ -11,7 +11,7 @@ describe('DataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [CoreModule],
-      providers: [provideZonelessChangeDetection()]
+      providers: [provideZonelessChangeDetection()],
     });
     service = TestBed.inject(DataService);
   });

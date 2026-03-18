@@ -13,7 +13,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
-      providers: [provideZonelessChangeDetection(), provideHttpClient()]
+      providers: [provideZonelessChangeDetection(), provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

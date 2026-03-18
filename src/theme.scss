@@ -5,7 +5,7 @@
 :root {
   @include mat.toolbar-overrides(
     (
-      container-background-color: lightblue
+      container-background-color: lightblue,
     )
   );
 }
