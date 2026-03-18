@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -22,7 +23,7 @@ describe('LibraryDialogComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LibraryDialogComponent],
-      providers: [{ provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] }]
+      providers: [provideZonelessChangeDetection(), { provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] }]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LibraryDialogComponent);
