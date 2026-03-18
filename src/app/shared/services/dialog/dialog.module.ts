@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
 
-import { DialogService } from './dialog.service';
+import { Dialog } from './dialog';
 
 @NgModule({
   imports: [MatDialogModule],
   exports: [],
   declarations: [],
-  providers: [DialogService],
+  providers: [Dialog],
 })
 export class DialogModule {}

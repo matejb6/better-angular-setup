@@ -1,27 +1,27 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WelcomePageComponent } from './welcome-page.component';
+import { WelcomePage } from './welcome-page';
 import {
   getFirstLibraryCard,
   getLibraryCards,
   getLibraryDialog,
   getLibraryDialogOkButton,
   getTitle,
-} from './welcome-page.component.query.spec';
+} from './welcome-page.query.spec';
 
-describe('WelcomePageComponent', () => {
-  let fixture: ComponentFixture<WelcomePageComponent>;
-  let component: WelcomePageComponent;
+describe('WelcomePage', () => {
+  let fixture: ComponentFixture<WelcomePage>;
+  let component: WelcomePage;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WelcomePageComponent],
+      imports: [WelcomePage],
       providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(WelcomePageComponent);
+    fixture = TestBed.createComponent(WelcomePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;

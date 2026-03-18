@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-not-found-page',
   standalone: true,
-  templateUrl: './not-found-page.component.html',
-  styleUrl: './not-found-page.component.scss',
+  templateUrl: './not-found-page.html',
+  styleUrl: './not-found-page.scss',
 })
-export class NotFoundPageComponent {
+export class NotFoundPage {
   readonly message: string = 'Oops, URL you try to access is not available!';
 }

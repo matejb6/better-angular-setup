@@ -3,18 +3,18 @@ import { TestBed } from '@angular/core/testing';
 
 import { LIBRARIES_MOCK } from '@data/libraries';
 import { DialogModule } from './dialog.module';
-import { DialogService } from './dialog.service';
-import { LibraryDialogComponent } from '@app/shared/components';
+import { Dialog } from './dialog';
+import { LibraryDialog } from '@app/shared/components';
 
-describe('DialogService', () => {
-  let service: DialogService;
+describe('Dialog', () => {
+  let service: Dialog;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [DialogModule],
       providers: [provideZonelessChangeDetection()],
     });
-    service = TestBed.inject(DialogService);
+    service = TestBed.inject(Dialog);
   });
 
   it('should be created', () => {
@@ -22,7 +22,7 @@ describe('DialogService', () => {
   });
 
   it('should open dialog', () => {
-    const dialogRef = service.openDialog(LibraryDialogComponent, LIBRARIES_MOCK[0]);
+    const dialogRef = service.openDialog(LibraryDialog, LIBRARIES_MOCK[0]);
 
     expect(dialogRef.getState()).toEqual(0);
   });

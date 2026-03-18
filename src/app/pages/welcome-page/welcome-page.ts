@@ -2,23 +2,23 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
-import { DataService } from '@app/core/services';
+import { LibrariesData } from '@app/core/services';
 import { Library } from '@app/core/interfaces';
 import { SharedModule } from '@app/shared/shared.module';
-import { LibraryCardComponent } from '@app/shared/components';
-import { LibraryDialogComponent } from '@app/shared/components';
-import { DialogService } from '@app/shared/services';
+import { LibraryCard } from '@app/shared/components';
+import { LibraryDialog } from '@app/shared/components';
+import { Dialog } from '@app/shared/services';
 
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [CommonModule, SharedModule, LibraryCardComponent],
-  templateUrl: './welcome-page.component.html',
-  styleUrl: './welcome-page.component.scss',
+  imports: [CommonModule, SharedModule, LibraryCard],
+  templateUrl: './welcome-page.html',
+  styleUrl: './welcome-page.scss',
 })
-export class WelcomePageComponent implements OnInit {
-  private dataService = inject(DataService);
-  private dialogService = inject(DialogService);
+export class WelcomePage implements OnInit {
+  private dataService = inject(LibrariesData);
+  private dialogService = inject(Dialog);
 
   readonly title: string = 'Hey developer 👋';
   readonly paragraph: string = 'This is an Angular app with additional setup which includes:';
@@ -34,6 +34,6 @@ export class WelcomePageComponent implements OnInit {
    * @param event Event data
    */
   clickCard(event: Library): void {
-    this.dialogService.openDialog(LibraryDialogComponent, event);
+    this.dialogService.openDialog(LibraryDialog, event);
   }
 }

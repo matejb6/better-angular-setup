@@ -8,10 +8,10 @@ import { Library } from '@app/core/interfaces';
   selector: 'app-library-card',
   standalone: true,
   imports: [MatCardModule, MatRippleModule],
-  templateUrl: './library-card.component.html',
-  styleUrl: './library-card.component.scss',
+  templateUrl: './library-card.html',
+  styleUrl: './library-card.scss',
 })
-export class LibraryCardComponent {
+export class LibraryCard {
   readonly libraryCard = input<Library>({
     logoPath: '',
     name: '',
