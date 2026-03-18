@@ -51,8 +51,11 @@ describe('WelcomePageComponent', () => {
 
   it('should close dialog when OK button clicked', (done) => {
     getFirstLibraryCard(nativeElem)?.click();
+    fixture.detectChanges();
+
     getLibraryDialogOkButton()?.click();
 
+    // Wait for dialog animation to finish
     setTimeout(() => {
       expect(getLibraryDialog()).toBeFalsy();
       done();
