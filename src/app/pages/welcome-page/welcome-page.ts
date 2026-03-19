@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 import { LibrariesData } from '@app/core/services';
 import { Library } from '@app/core/interfaces';
-import { SharedModule } from '@app/shared/shared.module';
 import { LibraryCard } from '@app/shared/components';
 import { LibraryDialog } from '@app/shared/components';
 import { Dialog } from '@app/shared/services';
@@ -12,7 +11,8 @@ import { Dialog } from '@app/shared/services';
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [CommonModule, SharedModule, LibraryCard],
+  imports: [CommonModule, LibraryCard],
+  providers: [Dialog],
   templateUrl: './welcome-page.html',
   styleUrl: './welcome-page.scss',
 })

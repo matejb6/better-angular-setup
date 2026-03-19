@@ -2,7 +2,6 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 
-import { CoreModule } from '../core.module';
 import { LibrariesData } from './libraries-data';
 
 describe('LibrariesData', () => {
@@ -10,7 +9,6 @@ describe('LibrariesData', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CoreModule],
       providers: [provideZonelessChangeDetection()],
     });
     service = TestBed.inject(LibrariesData);
