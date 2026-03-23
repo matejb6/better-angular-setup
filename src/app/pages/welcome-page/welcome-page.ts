@@ -27,6 +27,13 @@ export class WelcomePage implements OnInit {
   libraries$: Observable<Library[]> = new Observable<Library[]>();
 
   ngOnInit() {
+    this.initLibrariesObservable();
+  }
+
+  /**
+   * Initializes libraries observable
+   */
+  private initLibrariesObservable(): void {
     this.libraries$ = this.dataService.getLibrariesAsObs();
   }
 
