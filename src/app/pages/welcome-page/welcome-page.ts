@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
@@ -15,6 +15,7 @@ import { Dialog } from '@app/shared/services';
   providers: [Dialog],
   templateUrl: './welcome-page.html',
   styleUrl: './welcome-page.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WelcomePage implements OnInit {
   private dataService = inject(LibrariesData);

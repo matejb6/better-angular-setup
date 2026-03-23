@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 
@@ -10,6 +10,7 @@ import { Library } from '@app/core/interfaces';
   imports: [MatCardModule, MatRippleModule],
   templateUrl: './library-card.html',
   styleUrl: './library-card.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LibraryCard {
   readonly libraryCard = input<Library>({

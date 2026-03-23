@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -9,6 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   imports: [MatIconModule, MatToolbarModule],
   templateUrl: './toolbar.html',
   styleUrl: './toolbar.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Toolbar {
   private iconRegistry = inject(MatIconRegistry);
