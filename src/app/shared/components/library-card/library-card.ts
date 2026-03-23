@@ -24,9 +24,9 @@ export class LibraryCard {
   readonly defaultImage: string = '/logos/image.svg';
 
   /**
-   * When card clicked, emits and event of current library card data
+   * Emits and event of current library card data
    */
-  clickCard(): void {
+  emitCardInfo(): void {
     this.cardClick.emit(this.libraryCard());
   }
 }

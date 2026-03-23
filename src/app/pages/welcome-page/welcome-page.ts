@@ -38,10 +38,10 @@ export class WelcomePage implements OnInit {
   }
 
   /**
-   * Opens dialog when card clicked
+   * Opens dialog information card
    * @param event Event data
    */
-  clickCard(event: Library): void {
+  openLibraryInfo(event: Library): void {
     this.dialogService.openDialog(LibraryDialog, event);
   }
 }
