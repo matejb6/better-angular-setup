@@ -2,21 +2,21 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-import { getToolbar } from './app.component.query.spec';
+import { App } from './app';
+import { getToolbar } from './app.query.spec';
 
 describe('AppComponent', () => {
-  let fixture: ComponentFixture<AppComponent>;
-  let component: AppComponent;
+  let fixture: ComponentFixture<App>;
+  let component: App;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [App],
       providers: [provideZonelessChangeDetection(), provideHttpClient()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(App);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;

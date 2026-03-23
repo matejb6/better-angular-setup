@@ -1,21 +1,21 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotFoundPageComponent } from './not-found-page.component';
-import { getMessage } from './not-found-page.component.query.spec';
+import { NotFoundPage } from './not-found-page';
+import { getMessage } from './not-found-page.query.spec';
 
-describe('NotFoundPageComponent', () => {
-  let fixture: ComponentFixture<NotFoundPageComponent>;
-  let component: NotFoundPageComponent;
+describe('NotFoundPage', () => {
+  let fixture: ComponentFixture<NotFoundPage>;
+  let component: NotFoundPage;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NotFoundPageComponent],
+      imports: [NotFoundPage],
       providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(NotFoundPageComponent);
+    fixture = TestBed.createComponent(NotFoundPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;

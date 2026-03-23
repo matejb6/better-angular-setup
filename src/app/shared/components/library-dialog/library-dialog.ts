@@ -1,4 +1,4 @@
-import { Component, inject, InjectionToken } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, InjectionToken } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
@@ -10,9 +10,10 @@ import { Library } from '@app/core/interfaces';
   selector: 'app-library-dialog',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatDialogModule, MatIconModule],
-  templateUrl: './library-dialog.component.html',
-  styleUrl: './library-dialog.component.scss',
+  templateUrl: './library-dialog.html',
+  styleUrl: './library-dialog.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LibraryDialogComponent {
+export class LibraryDialog {
   libraryCard = inject(MAT_DIALOG_DATA as InjectionToken<Library>);
 }

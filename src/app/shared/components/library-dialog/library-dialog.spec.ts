@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { LIBRARIES_MOCK } from '@data/libraries';
-import { LibraryDialogComponent } from './library-dialog.component';
+import { LibraryDialog } from './library-dialog';
 import {
   getDialogActions,
   getDialogActionsLinkButton,
@@ -13,23 +13,23 @@ import {
   getDialogContentDescriptionList,
   getDialogContentDescriptionListItems,
   getDialogTitle,
-} from './library-dialog.component.query.spec';
+} from './library-dialog.query.spec';
 
-describe('LibraryDialogComponent', () => {
-  let fixture: ComponentFixture<LibraryDialogComponent>;
-  let component: LibraryDialogComponent;
+describe('LibraryDialog', () => {
+  let fixture: ComponentFixture<LibraryDialog>;
+  let component: LibraryDialog;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LibraryDialogComponent],
+      imports: [LibraryDialog],
       providers: [
         provideZonelessChangeDetection(),
         { provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] },
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LibraryDialogComponent);
+    fixture = TestBed.createComponent(LibraryDialog);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;

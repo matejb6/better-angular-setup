@@ -3,7 +3,7 @@ import { ComponentType } from '@angular/cdk/overlay';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Injectable()
-export class DialogService {
+export class Dialog {
   private dialog = inject(MatDialog);
 
   /**
