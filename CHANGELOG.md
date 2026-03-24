@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Angular update to v20
 - Migrate to zoneless change detection
 - Updates styles
-- Removed karma config and page data
+- Removed karma config and content
 - Removed modules
 - Files renamed according to new naming convention
 
