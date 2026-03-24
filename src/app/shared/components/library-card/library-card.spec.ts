@@ -1,20 +1,22 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LIBRARIES_MOCK } from '@data/libraries';
-import { LibraryCardComponent } from './library-card.component';
-import { getCard, getCardImage, getCardTitle } from './library-card.component.query.spec';
+import { LibraryCard } from './library-card';
+import { getCard, getCardImage, getCardTitle } from './library-card.query.spec';
 
-describe('LibraryCardComponent', () => {
-  let fixture: ComponentFixture<LibraryCardComponent>;
-  let component: LibraryCardComponent;
+describe('LibraryCard', () => {
+  let fixture: ComponentFixture<LibraryCard>;
+  let component: LibraryCard;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LibraryCardComponent]
+      imports: [LibraryCard],
+      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LibraryCardComponent);
+    fixture = TestBed.createComponent(LibraryCard);
     component = fixture.componentInstance;
     fixture.componentRef.setInput('libraryCard', LIBRARIES_MOCK[0]);
     fixture.detectChanges();

@@ -1,17 +1,17 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 
-import { CoreModule } from '../core.module';
-import { DataService } from './data.service';
+import { LibrariesData } from './libraries-data';
 
-describe('DataService', () => {
-  let service: DataService;
+describe('LibrariesData', () => {
+  let service: LibrariesData;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CoreModule]
+      providers: [provideZonelessChangeDetection()],
     });
-    service = TestBed.inject(DataService);
+    service = TestBed.inject(LibrariesData);
   });
 
   it('should be created', () => {

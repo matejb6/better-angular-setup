@@ -1,21 +1,22 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 
-import { ToolbarComponent } from './toolbar.component';
-import { getToolbar, getToolbarIcon, getToolbarTitle } from './toolbar.component.query.spec';
+import { Toolbar } from './toolbar';
+import { getToolbar, getToolbarIcon, getToolbarTitle } from './toolbar.query.spec';
 
-describe('ToolbarComponent', () => {
-  let fixture: ComponentFixture<ToolbarComponent>;
-  let component: ToolbarComponent;
+describe('Toolbar', () => {
+  let fixture: ComponentFixture<Toolbar>;
+  let component: Toolbar;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToolbarComponent],
-      providers: [provideHttpClient()]
+      imports: [Toolbar],
+      providers: [provideZonelessChangeDetection(), provideHttpClient()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ToolbarComponent);
+    fixture = TestBed.createComponent(Toolbar);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;

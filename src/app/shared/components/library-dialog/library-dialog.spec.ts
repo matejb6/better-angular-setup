@@ -1,8 +1,9 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { LIBRARIES_MOCK } from '@data/libraries';
-import { LibraryDialogComponent } from './library-dialog.component';
+import { LibraryDialog } from './library-dialog';
 import {
   getDialogActions,
   getDialogActionsLinkButton,
@@ -11,21 +12,24 @@ import {
   getDialogContentDescription,
   getDialogContentDescriptionList,
   getDialogContentDescriptionListItems,
-  getDialogTitle
-} from './library-dialog.component.query.spec';
+  getDialogTitle,
+} from './library-dialog.query.spec';
 
-describe('LibraryDialogComponent', () => {
-  let fixture: ComponentFixture<LibraryDialogComponent>;
-  let component: LibraryDialogComponent;
+describe('LibraryDialog', () => {
+  let fixture: ComponentFixture<LibraryDialog>;
+  let component: LibraryDialog;
   let nativeElem: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LibraryDialogComponent],
-      providers: [{ provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] }]
+      imports: [LibraryDialog],
+      providers: [
+        provideZonelessChangeDetection(),
+        { provide: MAT_DIALOG_DATA, useValue: LIBRARIES_MOCK[0] },
+      ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LibraryDialogComponent);
+    fixture = TestBed.createComponent(LibraryDialog);
     component = fixture.componentInstance;
     fixture.detectChanges();
     nativeElem = fixture.nativeElement;
@@ -72,16 +76,20 @@ describe('LibraryDialogComponent', () => {
   });
 
   it('should have description', () => {
-    expect(getDialogContentDescription(nativeElem)?.innerText).toEqual(LIBRARIES_MOCK[0].description);
+    expect(getDialogContentDescription(nativeElem)?.innerText).toEqual(
+      LIBRARIES_MOCK[0].description,
+    );
   });
 
   it('should have correct number of steps', () => {
-    expect(getDialogContentDescriptionListItems(nativeElem)?.length).toEqual(LIBRARIES_MOCK[0].stepsToAdd.length);
+    expect(getDialogContentDescriptionListItems(nativeElem)?.length).toEqual(
+      LIBRARIES_MOCK[0].stepsToAdd.length,
+    );
   });
 
   it('should have first step', () => {
     expect(getDialogContentDescriptionListItems(nativeElem)?.item(0).innerText).toEqual(
-      LIBRARIES_MOCK[0].stepsToAdd[0]
+      LIBRARIES_MOCK[0].stepsToAdd[0],
     );
   });
 
