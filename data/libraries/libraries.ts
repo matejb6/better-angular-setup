@@ -51,15 +51,4 @@ export const LIBRARIES: Library[] = [
       'In root create file .husky/pre-commit containing commands which should be run',
     ],
   },
-  {
-    logoPath: '/logos/karma.svg',
-    name: 'Karma config',
-    description: 'Karma config extended with spec reporter and CI setup',
-    link: 'https://karma-runner.github.io/latest/index.html',
-    stepsToAdd: [
-      'Check karma.conf.js for Karma configuration',
-      'Check package.json test scripts',
-      'Install Karma spec reporter with command: npm install karma-spec-reporter --save-dev',
-    ],
-  },
 ];
