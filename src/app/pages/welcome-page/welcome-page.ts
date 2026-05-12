@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { LibrariesData } from '@app/core/services';
 import { Library } from '@app/core/interfaces';
@@ -11,31 +10,20 @@ import { Dialog } from '@app/shared/services';
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [CommonModule, LibraryCard],
+  imports: [LibraryCard],
   providers: [Dialog],
   templateUrl: './welcome-page.html',
   styleUrl: './welcome-page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WelcomePage implements OnInit {
+export class WelcomePage {
   private dataService = inject(LibrariesData);
   private dialogService = inject(Dialog);
 
   readonly title: string = 'Hey developer 👋';
   readonly paragraph: string = 'This is an Angular app with additional setup which includes:';
   readonly message: string = 'This is just the beginning, it is your turn now 🙂...';
-  libraries$: Observable<Library[]> = new Observable<Library[]>();
-
-  ngOnInit() {
-    this.initLibrariesObservable();
-  }
-
-  /**
-   * Initializes libraries observable
-   */
-  private initLibrariesObservable(): void {
-    this.libraries$ = this.dataService.getLibrariesAsObs();
-  }
+  libraries = toSignal(this.dataService.getLibrariesAsObs());
 
   /**
    * Opens dialog information card
