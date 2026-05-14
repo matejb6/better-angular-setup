@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
+## [1.11.0] - 2026-05-14
+### Changed
+- Angular update to v21
+- Async pipe replaced by signal
+
 ## [1.10.0] - 2026-03-24
 ### Added
 - On push change detection strategy for components
